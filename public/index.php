@@ -52,6 +52,6 @@ $response = $kernel->handle(
 	$request = Illuminate\Http\Request::capture()
 );
 
-$response->send();
-//test
+$response->send();sad
+//testasdas
 $kernel->terminate($request, $response);
