@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"folder_include_patterns":
+			[
+				"*.php"
+			],
+			"name": "Views",
+			"path": "./resources/views"
+		},
+		{
+			"folder_include_patterns":
+			[
+				"*.php"
+			],
+			"name": "Constrollers",
+			"path": "./app/Http/Controllers"
+		},
+	]
+}
