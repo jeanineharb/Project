@@ -53,5 +53,5 @@ $response = $kernel->handle(
 );
 
 $response->send();
-
+//test
 $kernel->terminate($request, $response);
