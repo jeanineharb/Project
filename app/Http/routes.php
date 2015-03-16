@@ -12,21 +12,8 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::get('/about', 'WelcomeController@index');
 
-Route::get('/jeanine', function()
-{
-	
-return 'jeanine';
-
-});
-
-Route::get('/test', function()
-{
-
-return 'testss';
-
-});
+Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
