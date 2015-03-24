@@ -43,17 +43,17 @@
 		</style>
 	</head>
 	<body>
-
+ <!-- 
 	<div class="container-fluid">
 	  <h1>My First Bootstrap Page</h1>
 	  <p>This is some text.</p> 
-	</div>
- <!--  
+	</div>-->
+ 
 		<div class="container">
 			<div class="content">
 				<div class="title">Laravel 5</div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
-		</div>-->
+		</div>
 	</body>
 </html>
