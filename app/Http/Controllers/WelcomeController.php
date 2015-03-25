@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use DB;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -30,7 +32,11 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+		$msg='';
+		if(DB::connection()->getDatabaseName()){
+			$msg = "Yes! successfully connected to the DB: " . DB::connection()->getDatabaseName();
+		}
+		return view('welcome')->with('msg', $msg);
 	}
 
 }
