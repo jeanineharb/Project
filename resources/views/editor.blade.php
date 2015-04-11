@@ -21,7 +21,7 @@
 		                    label: 'Insert Variable Text',
 		                    command: 'varDialog',
 		                    toolbar: 'insert',
-		                    icon: 'https://avatars1.githubusercontent.com/u/5500999?v=2&s=16'
+		                    icon: '{{ asset("/ckeditor/skins/icy_orange/images/add.png") }}'
 		                });
 		
 		                CKEDITOR.dialog.add('varDialog', function (editor) {
