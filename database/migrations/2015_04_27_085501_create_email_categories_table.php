@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEmailCategoryTable extends Migration {
+class CreateEmailCategoriesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,11 @@ class CreateEmailCategoryTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('EmailCategory', function(Blueprint $table)
+		Schema::create('email_categories', function(Blueprint $table)
 		{
-			$table->increments('CategoryId');
-			$table->string('CategoryName');
-			$table->string('CategoryDesc');
+			$table->increments('categoryId');
+			$table->string('categoryName');
+			$table->string('categoryDesc');
 			$table->timestamps();
 		});
 	}
@@ -28,7 +28,7 @@ class CreateEmailCategoryTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('EmailCategory');
+		Schema::drop('email_categories');
 	}
 
 }
