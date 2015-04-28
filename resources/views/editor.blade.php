@@ -55,8 +55,9 @@
 		                            var dialog = this;
 		                            var field = editor.document.createElement('field');
 		                            field.setAttribute('id', dialog.getValueOf('tab-basic', 'var'));
-		                            field.setAttribute('style', 'background-color: #f00;');
-		                            field.setText(dialog.getValueOf('tab-basic', 'title'));
+		                            field.setAttribute('style', 'border: 1px solid #f00;');
+		                            text = dialog.getValueOf('tab-basic', 'title').toUpperCase();
+		                            field.setText('$'+text);
 		                            editor.insertElement(field);
 		                        }
 		                    };
