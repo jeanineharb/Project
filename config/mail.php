@@ -14,7 +14,7 @@ return [
  
     'username' => 'hachemmansour21@gmail.com',
  
-    'password' => 'nmpcnmpc',
+    'password' => 'm',
  
     'sendmail' => '/usr/sbin/sendmail -bs',
  
