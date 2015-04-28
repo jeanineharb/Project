@@ -2,7 +2,7 @@
 
 use Mail;
 
-class TestXmlController extends Controller {
+class TestMailController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -32,7 +32,15 @@ class TestXmlController extends Controller {
 	 */
 	public function index()
 	{
+		echo "asdasdas";
 
+
+	$data  = array('firstname' =>  'Jeanine',);
+
+	Mail::send('emails.emailcontent', $data, function($message) {
+
+    $message->to('jeanine.harb@gmail.com', 'Jon Doe')->subject('Welcome to the Laravel 4 Auth App!');
+});
 
 	}
 
