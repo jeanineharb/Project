@@ -19,6 +19,7 @@ Route::get('/testMail', 'TestMailController@index');
 Route::get('/testXml', 'TestXmlController@index');
 
 Route::get('/editor', 'EditorController@create');
+Route::get('/temp', 'EditorController@index');
 
 
 Route::controllers([
