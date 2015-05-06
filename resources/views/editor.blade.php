@@ -1,7 +1,7 @@
 @extends('app') 
 
 @section('content')
-<div class="container">
+
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
@@ -12,6 +12,7 @@
                 		This is my textarea to be replaced with CKEditor.
             		</textarea>
 
+            		<script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
 					<script src="{{ asset('/ckeditor/fullEditorWithCustomButton.js') }}"></script>
 					
 					<p> <input type="submit" value="Submit"> </p>
@@ -20,5 +21,4 @@
 			</div>
 		</div>
 	</div>
-</div>
 @endsection

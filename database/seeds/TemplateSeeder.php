@@ -132,21 +132,8 @@ class TemplateSeeder extends Seeder {
 							margin-left: 15px;
 						}
 				
-						#tagLine{
-							border-top: 5px solid #05B2D2;
-							padding-top: 20px;
-						}
-				
-						#taglist{
-							display: inline-block;
-							margin-left: 20px;
-							font-weight: bold;
-							margin: 0 0 0 20px;
-						}
-				
 					</style>
-				
-				<div id="container">
+
 					<div id="header">
 						<div id="headerLeft">
 							<h2 id="sampleTitle" contenteditable="true">
@@ -217,24 +204,6 @@ class TemplateSeeder extends Seeder {
 							</div>
 						</div>
 					</div>
-					<div id="tagLine">
-						Tags of this article:
-						<p id="taglist" contenteditable="true">
-							inline, editing, floating, CKEditor
-						</p>
-					</div>
-				</div>
-				<div id="footer">
-					<hr>
-					<p>
-						CKEditor - The text editor for the Internet - <a class="samples" href="http://ckeditor.com/">
-							http://ckeditor.com</a>
-					</p>
-					<p id="copy">
-						Copyright &copy; 2003-2015, <a class="samples" href="http://cksource.com/">CKSource</a>
-						- Frederico Knabben. All rights reserved.
-					</p>
-				</div>
 				';
 		$temp->save();
 	}
