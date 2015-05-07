@@ -23,6 +23,7 @@ class CreateTemplatesTable extends Migration {
 			$table->boolean('isFavorite');
 			$table->boolean('isPredefined');
 			$table->longtext('html');
+			$table->longtext('css');
 			$table->timestamps();
 		});
 	}

@@ -8,24 +8,20 @@
   	<h1>
 	  	<?php 
 	  		use App\Template;
-	  		$temp = Template::find(1)->pluck('templateName');
-	  		echo $temp;
+	  		$temp = Template::find(1);
+	  		echo $temp->templateName;
 	  	?>
   	</h1>
   </div>
   <div class="col-xs-6 col-md-4" style="text-align: right;">
-  <form action="{{ asset('/ckeditor/samples/sample_posteddata.php')}}"
-					method="post">
   	<button type="button" class="btn btn-default">Discard</button>
   	<button type="button" class="btn btn-default" onclick="onSubmit()">Save</button>
-  	</form>
   </div>
-	
 </div>
 
 <?php
-$temp = Template::find(1)->pluck('html');
-echo $temp;
+echo $temp->html;
+echo $temp->css;
 ?>
 
 <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
@@ -50,7 +46,6 @@ function onSubmit(){
 
  		redirect("{{ asset('/ckeditor/samples/sample_posteddata.php')}}", "variable", data);
 }
-
 
 </script>
 					
