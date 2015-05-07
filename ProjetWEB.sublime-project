@@ -7,7 +7,7 @@
 				"*.php"
 			],
 			"name": "Views",
-			"path": "./resources/views"
+			"path": "resources/views"
 		},
 		{
 			"folder_include_patterns":
@@ -15,19 +15,22 @@
 				"*.php"
 			],
 			"name": "Constrollers",
-			"path": "./app/Http/Controllers"
+			"path": "app/Http/Controllers"
 		},
-				{
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
+		{
 			"file_include_patterns":
 			[
 				"*.php"
 			],
+			"folder_include_patterns":
+			[
+				"*.php"
+			],
 			"name": "Miscellaneous",
-			"path": "./public/"
+			"path": "public"
 		},
+		{
+			"path": "app"
+		}
 	]
 }
