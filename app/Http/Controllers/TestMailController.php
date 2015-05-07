@@ -32,14 +32,21 @@ class TestMailController extends Controller {
 	 */
 	public function index()
 	{
-		echo "asdasdas";
+		echo "asdads";
+
+	$content = "Hi,welcome user!";
+
+	$data = [
+    'content' => $content
+	];
 
 
-	$data  = array('firstname' =>  'Jeanine',);
+	Mail::send('emails.mail-template', $data, function($message) {
 
-	Mail::send('emails.emailcontent', $data, function($message) {
+    $message->to('jeanine.harb@gmail.com', 'Jon Doe');
+    $message->subject('Welcome to the Laravel 4 Auth App!');
+    $message->from('test@audi.com', 'Robert Traboulsi');
 
-    $message->to('jeanine.harb@gmail.com', 'Jon Doe')->subject('Welcome to the Laravel 4 Auth App!');
 });
 
 	}

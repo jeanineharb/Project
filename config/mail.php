@@ -8,7 +8,6 @@ return [
  
     'port' => 587,
  
-    'from' => array('address' => 'humanressources@bankaudi.com', 'name' => 'Bank Audi'),
  
     //'encryption' => 'ssl',
  
