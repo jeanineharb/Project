@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Template;
+
 class EditorController extends Controller {
 
 	/**
@@ -14,7 +16,8 @@ class EditorController extends Controller {
 	 */
 	public function index()
 	{
-		return view('template');
+		$templates = Template::all();
+		return view('predefinedTemplates')->with('templates', $templates);
 	}
 
 	/**
@@ -45,7 +48,7 @@ class EditorController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		return view('template');
 	}
 
 	/**

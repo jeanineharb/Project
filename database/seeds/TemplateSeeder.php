@@ -208,6 +208,18 @@ class TemplateSeeder extends Seeder {
 					</style>
 				';
 		$temp->save();
+		
+		
+		
+		$temp = new Template;
+		$temp->category = 2;
+		$temp->templateName = 'Template2';
+		$temp->isFavorite = 'Yes';
+		$temp->isPredefined = 'Yes';
+		$temp->html = '';
+		$temp->css = '';
+		$temp->save();
+		
 	}
 
 }
