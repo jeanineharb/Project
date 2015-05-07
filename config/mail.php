@@ -9,7 +9,7 @@ return [
     'port' => 587,
  
  
-    'encryption' => 'tls',
+    //'encryption' => 'ssl',
  
     'username' => 'info1@templ8.dreamhosters.com',
  
