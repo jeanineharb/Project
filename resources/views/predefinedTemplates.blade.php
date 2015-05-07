@@ -2,11 +2,11 @@
 
 @section('content')
 
-<?php
-foreach($templates as $template){
-	echo $template->templateName;
-}
 
-?>
+@foreach ($temp as $t)
+     <li>{{ $t->category()->first()->categoryName }}</li>
+@endforeach
+
+
 
 @endsection

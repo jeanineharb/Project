@@ -10,5 +10,9 @@ class EmailCategory extends Model {
 	
 	// define custom primary key
 	protected $primaryKey = 'categoryId';
+
+	public function templates(){
+		return $this->hasMany('App\Template', 'category', 'categoryId');
+	}
 	
 }

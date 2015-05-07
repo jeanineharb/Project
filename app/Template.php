@@ -11,4 +11,8 @@ class Template extends Model {
 	// define custom primary key
 	protected $primaryKey = 'templateId';
 
+	public function category(){
+		return $this->belongsTo('App\EmailCategory', 'category', 'categoryId');
+	}
+
 }

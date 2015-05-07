@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Template;
+use App\EmailCategory;
 
 class EditorController extends Controller {
 
@@ -17,7 +18,10 @@ class EditorController extends Controller {
 	public function index()
 	{
 		$templates = Template::all();
-		return view('predefinedTemplates')->with('templates', $templates);
+		//$cat = Template::find(1)->category();
+
+		// return view('predefinedTemplates')->with('cat', $cat);
+		return view('predefinedTemplates')->with('temp', $templates);
 	}
 
 	/**
