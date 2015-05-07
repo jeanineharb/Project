@@ -4,17 +4,17 @@ return [
 
     'driver' => 'smtp',
  
-    'host' => 'smtp.gmail.com',
+    'host' => 'sub4.mail.dreamhost.com',
  
     'port' => 587,
  
     'from' => array('address' => 'humanressources@bankaudi.com', 'name' => 'Bank Audi'),
  
-    'encryption' => 'tls',
+    //'encryption' => 'ssl',
  
-    'username' => 'hachemmansour21@gmail.com',
+    'username' => 'info1@templ8.dreamhosters.com',
  
-    'password' => 'nmpcnmpc',
+    'password' => 'testtest12',
  
     'sendmail' => '/usr/sbin/sendmail -bs',
  
