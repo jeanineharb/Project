@@ -59,7 +59,8 @@ class EditorController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$temp = Template::where('templateId', '=', $id);
+		return view('template')->with('template', $temp);
 	}
 
 	/**
