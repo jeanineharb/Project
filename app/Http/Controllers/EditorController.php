@@ -14,7 +14,7 @@ class EditorController extends Controller {
 	 */
 	public function index()
 	{
-		return view('editor');
+		return view('template');
 	}
 
 	/**
@@ -24,7 +24,7 @@ class EditorController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('editor');
 	}
 
 	/**

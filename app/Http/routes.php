@@ -14,9 +14,13 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/about', 'WelcomeController@index');
-Route::get('/editor', 'EditorController@index');
+
 Route::get('/testMail', 'TestMailController@index');
 Route::get('/testXml', 'TestXmlController@index');
+
+Route::get('/editor', 'EditorController@create');
+Route::get('/temp', 'EditorController@index');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
