@@ -32,7 +32,7 @@ class TestMailController extends Controller {
 	 */
 	public function index()
 	{
-		echo "asdads";
+		echo "asdadse2";
 
 	$content = "Hi,welcome user!";
 
@@ -43,9 +43,9 @@ class TestMailController extends Controller {
 
 	Mail::send('emails.mail-template', $data, function($message) {
 
-    $message->to('jeanine.harb@gmail.com', 'Jon Doe');
+    $message->to('mansour.hachem@.com', 'Jon Doe');
     $message->subject('Welcome to the Laravel 4 Auth App!');
-    $message->from('test@audi.com', 'Robert Traboulsi');
+    $message->from('kjhkjh@k.com', 'lm lm');
 
 });
 

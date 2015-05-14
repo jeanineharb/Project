@@ -14,8 +14,13 @@
 			[
 				"*.php"
 			],
+<<<<<<< Updated upstream
 			"name": "Constrollers",
 			"path": "app/Http/Controllers"
+=======
+			"name": "Controllers",
+			"path": "./app/Http/Controllers"
+>>>>>>> Stashed changes
 		},
 		{
 			"file_include_patterns":
