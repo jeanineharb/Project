@@ -4,11 +4,11 @@
 
 <div class="row">
   <div class="col-xs-6 col-md-4"></div>
-  <div class="col-xs-6 col-md-4" style="text-align: center;" contenteditable="true">
+  <div class="col-xs-6 col-md-4" style="text-align: center;">
   	<h1>
 	  	<?php 
 	  		use App\Template;
-	  		$temp = Template::find(1);
+	  		$temp = Template::find(2);
 	  		echo $temp->templateName;
 	  	?>
   	</h1>
