@@ -40,10 +40,9 @@ class TestMailController extends Controller {
     'content' => $content
 	];
 
-
 	Mail::send('emails.mail-template', $data, function($message) {
 
-    $message->to('mansour.hachem@.com', 'Jon Doe');
+    $message->to('mansour.hachem@hotmail.com', 'Jon Doe');
     $message->subject('Welcome to the Laravel 4 Auth App!');
     $message->from('kjhkjh@k.com', 'lm lm');
 

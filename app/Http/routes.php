@@ -21,6 +21,11 @@ Route::get('/testXml', 'TestXmlController@index');
 Route::get('/editor', 'EditorController@create');
 Route::get('/temp', 'EditorController@index');
 
+Route::get('upload', function() {
+  return View::make('uploads.upload');
+});
+
+Route::post('apply/upload', 'ApplyController@upload');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

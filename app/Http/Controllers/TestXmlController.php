@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use Input;
 class TestXmlController extends Controller {
 
 	/*
@@ -18,6 +18,7 @@ class TestXmlController extends Controller {
 	 *
 	 * @return void
 	 */
+
 	public function __construct()
 	{
 		$this->middleware('guest');
@@ -30,16 +31,21 @@ class TestXmlController extends Controller {
 	 */
 	public function index()
 	{
+		$file = Input::file('photo');
 
-$xml=simplexml_load_file("books.xml") or die("Error: Cannot create object");
+		echo $file->getClientOriginalName();
 
-	foreach($xml->children() as $books) { 
 
-    echo $books->title . ", "; 
-    echo $books->author . ", "; 
-    echo $books->year . ", ";
-    echo $books->price . "<br>"; 
-} 
+			// $xml=simplexml_load_file("books.xml") or die("Error: Cannot create object");
+
+			// foreach($xml->children() as $books) { 
+
+		 //    echo $books->title . ", "; 
+		 //    echo $books->author . ", "; 
+		 //    echo $books->year . ", ";
+		 //    echo $books->price . "<br>"; 
+
+			// } 
 
 	}
 
