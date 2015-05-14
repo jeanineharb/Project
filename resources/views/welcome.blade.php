@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Bootstrap Example</title>
+		<title>Xpedit</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
@@ -51,9 +51,8 @@
  
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ $msg }}</div>
-				<!--  <div class="quote">{{ Inspiring::quote() }}</div>-->
+				<div class="title">Xpedit</div>
+				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
 	</body>

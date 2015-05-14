@@ -17,11 +17,14 @@ class EditorController extends Controller {
 	 */
 	public function index()
 	{
-		$templates = Template::all();
+		
 		//$cat = Template::find(1)->category();
 
 		// return view('predefinedTemplates')->with('cat', $cat);
-		return view('predefinedTemplates')->with('temp', $templates);
+		// $templates = Template::all();
+		// return view('predefinedTemplates')->with('temp', $templates);
+
+		return view('template');
 	}
 
 	/**
