@@ -21,8 +21,9 @@ class EditorController extends Controller {
 		// $cat = Template::find(1)->category();
 
 		// return view('predefinedTemplates')->with('cat', $cat);
-		$templates = Template::all();
-		return view('predefinedTemplates')->with('temp', $templates);
+		// $templates = Template::all();
+		$cat = EmailCategory::all();
+		return view('predefinedTemplates')->with('cat', $cat);
 
 		// return view('predefinedTemplates');
 	}
