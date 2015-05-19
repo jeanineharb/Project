@@ -18,13 +18,13 @@ class EditorController extends Controller {
 	public function index()
 	{
 		
-		//$cat = Template::find(1)->category();
+		// $cat = Template::find(1)->category();
 
 		// return view('predefinedTemplates')->with('cat', $cat);
-		// $templates = Template::all();
-		// return view('predefinedTemplates')->with('temp', $templates);
+		$templates = Template::all();
+		return view('predefinedTemplates')->with('temp', $templates);
 
-		return view('template');
+		// return view('predefinedTemplates');
 	}
 
 	/**
@@ -55,7 +55,7 @@ class EditorController extends Controller {
 	 */
 	public function show($id)
 	{
-		return view('template');
+		//
 	}
 
 	/**
@@ -66,8 +66,8 @@ class EditorController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$temp = Template::where('templateId', '=', $id);
-		return view('template')->with('template', $temp);
+		$temp = Template::where('templateId', '=', $id)->get()->first();
+		return view('template')->with('temp', $temp);
 	}
 
 	/**

@@ -4,7 +4,9 @@
 
 
 @foreach ($temp as $t)
-     <li>{{ $t->category()->first()->categoryName }}</li>
+     <li><a href="{{ route('edit.temp', $t->templateId) }}"> {{ $t->templateName }} </a></li>
+     <!-- {{ $t->category()->first()->categoryName }} -->
+
 @endforeach
 
 

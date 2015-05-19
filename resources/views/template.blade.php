@@ -5,13 +5,7 @@
 <div class="row">
   <div class="col-xs-6 col-md-4"></div>
   <div class="col-xs-6 col-md-4" style="text-align: center;">
-  	<h1>
-	  	<?php 
-	  		use App\Template;
-	  		$temp = Template::find(2);
-	  		echo $temp->templateName;
-	  	?>
-  	</h1>
+  	<h1> {{ $temp->templateName }} </h1>
   </div>
   <div class="col-xs-6 col-md-4" style="text-align: right;">
   	<button type="button" class="btn btn-default">Discard</button>
