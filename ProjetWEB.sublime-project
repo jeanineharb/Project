@@ -2,43 +2,13 @@
 	"folders":
 	[
 		{
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
-			"name": "Views",
-			"path": "resources/views"
+			"path": "Http/Controllers"
 		},
 		{
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
-<<<<<<< Updated upstream
-			"name": "Constrollers",
-			"path": "app/Http/Controllers"
-=======
-			"name": "Controllers",
-			"path": "./app/Http/Controllers"
->>>>>>> Stashed changes
+			"path": "/Users/macbook/Documents/Sites/Project/resources/views"
 		},
 		{
-			"file_include_patterns":
-			[
-				"*.php"
-			],
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
-			"name": "Miscellaneous",
-			"path": "public"
-		},
-		{
-			"path": "app"
-		},
-		{
-			"path": "database"
+			"path": "/Users/macbook/Documents/Sites/Project/database"
 		}
 	]
 }
