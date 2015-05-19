@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder {
 	{
 		//Model::unguard();
 
-// 		$this->call('EmailCategorySeeder');
-//         $this->command->info('email_categories table seeded!');
+		// $this->call('EmailCategorySeeder');
+		// $this->command->info('email_categories table seeded!');
         
         $this->call('TemplateSeeder');
         $this->command->info('templates table seeded!');

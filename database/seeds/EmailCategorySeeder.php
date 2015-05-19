@@ -29,32 +29,32 @@ class EmailCategorySeeder extends Seeder {
 		
 		$cat = new EmailCategory;
 		$cat->categoryName = 'Newsletter';
-		$cat->categoryDesc = 'A template fit for sending newsletters and updates.';
+		$cat->categoryDesc = 'Templates fit for sending newsletters and updates.';
 		$cat->save();
 		
 		$cat = new EmailCategory;
 		$cat->categoryName = 'Advertisement';
-		$cat->categoryDesc = 'A template used for sending ads and promotions.';
+		$cat->categoryDesc = 'Templates used for sending ads and promotions.';
 		$cat->save();
 		
 		$cat = new EmailCategory;
 		$cat->categoryName = 'Electronic Bill';
-		$cat->categoryDesc = 'A template used for sending bills by email.';
+		$cat->categoryDesc = 'Templates used for sending bills by email.';
 		$cat->save();
 		
 		$cat = new EmailCategory;
 		$cat->categoryName = 'Account Statement';
-		$cat->categoryDesc = 'A template used for emailing account, credit card and bank statements.';
+		$cat->categoryDesc = 'Templates used for emailing account, credit card and bank statements.';
 		$cat->save();
 		
 		$cat = new EmailCategory;
 		$cat->categoryName = 'Personal Message';
-		$cat->categoryDesc = 'A template suitable for all kinds of messages.';
+		$cat->categoryDesc = 'Templates suitable for all kinds of messages.';
 		$cat->save();
 		
 		$cat = new EmailCategory;
-		$cat->categoryName = 'Empty Email';
-		$cat->categoryDesc = 'A customizable template from the ground-up.';
+		$cat->categoryName = 'Blank Template';
+		$cat->categoryDesc = 'Customizable template from the ground-up.';
 		$cat->save();
 	}
 
