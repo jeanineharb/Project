@@ -22,6 +22,7 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
+
 <body>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -32,12 +33,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Xpedit</a>
+				<a class="navbar-brand" href="{{ url('/') }}">Xpedit</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{ url('/home') }}">Home</a></li>
 					@if (!Auth::guest())
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Templates <span class="caret"></span></a>
@@ -47,7 +48,7 @@
 							</ul>
 						</li>
 					@endif
-					<li><a href="{{ url('/') }}">About</a></li>
+					<li><a href="{{ url('/about') }}">About</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
