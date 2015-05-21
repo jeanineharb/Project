@@ -8,7 +8,7 @@
   		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   		<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
-  
+
 		<style>
 			body {
 				margin: 0;
@@ -43,16 +43,12 @@
 		</style>
 	</head>
 	<body>
- <!-- 
-	<div class="container-fluid">
-	  <h1>My First Bootstrap Page</h1>
-	  <p>This is some text.</p> 
-	</div>-->
- 
+	
 		<div class="container">
 			<div class="content">
 				<div class="title">Xpedit</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
+				<!-- <div class="quote">{{ Inspiring::quote() }}</div> -->
+				<p> <a class="btn btn-default btn-block" href="{{ url('/about') }}" style="font-size: 18px;"> Learn more </a> </p>
 			</div>
 		</div>
 	</body>
