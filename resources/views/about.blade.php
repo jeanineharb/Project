@@ -2,14 +2,11 @@
 
 @section('content')
 
-<div class="hero-unit">
-	<h1>Heading</h1>
-	<p>Tagline</p>
-	<div class="row">
-		<div class="col-md-8">
-			<p><a class="btn btn-primary btn-large">Learn more</a></p>
-		</div>
-	</div>
+<div class="jumbotron">
+	<h3>Xpedit</h3>
+	<p>Your go-to app for customized HTML email templates!</p>
+	
+	<p style="font-size: 13px;"> Developed by Jeanine Harb and Mansour Hachem </p>
 </div>
 
 
