@@ -2,7 +2,7 @@
 	"folders":
 	[
 		{
-			"folder_include_patterns":
+			"file_include_patterns":
 			[
 				"*.php"
 			],
@@ -17,6 +17,7 @@
 			"name": "Controllers",
 			"path": "app/Http/Controllers"
 		},
+<<<<<<< HEAD
 		{
 			"file_include_patterns":
 			[
@@ -28,6 +29,28 @@
 			],
 			"name": "Miscellaneous",
 			"path": "public"
+=======
+			{
+			"folder_include_patterns":
+			[
+				"*.php"
+			],
+			"name": "Miscellaneous",
+			"path": "./Miscellaneous/"
+
+		},
+		{
+		
+			"name": "Config",
+			"path": "./Config/"
+
+		},
+		{
+		
+			"name": "Database",
+			"path": "./database/"
+
+>>>>>>> Project/JM
 		},
 		{
 			"path": "database"

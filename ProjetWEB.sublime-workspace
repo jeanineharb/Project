@@ -184,6 +184,7 @@
 	"buffers":
 	[
 		{
+<<<<<<< HEAD
 			"file": "resources/views/app.blade.php",
 			"settings":
 			{
@@ -196,10 +197,17 @@
 			"settings":
 			{
 				"buffer_size": 1078,
+=======
+			"file": "ProjetWEB.sublime-project",
+			"settings":
+			{
+				"buffer_size": 497,
+>>>>>>> Project/JM
 				"line_ending": "Unix"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "app/Http/Controllers/HomeController.php",
 			"settings":
 			{
@@ -260,6 +268,12 @@
 			"settings":
 			{
 				"buffer_size": 524,
+=======
+			"file": "app/Http/Controllers/TestXmlController.php",
+			"settings":
+			{
+				"buffer_size": 1654,
+>>>>>>> Project/JM
 				"line_ending": "Unix"
 			}
 		}
@@ -541,8 +555,14 @@
 	},
 	"expanded_folders":
 	[
+<<<<<<< HEAD
 		"/Users/macbook/Documents/Sites/Project/resources/views",
 		"/Users/macbook/Documents/Sites/Project/database/seeds"
+=======
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/app/Http/Controllers",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Miscellaneous",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Config"
+>>>>>>> Project/JM
 	],
 	"file_history":
 	[
@@ -736,24 +756,41 @@
 			[
 				{
 					"buffer": 0,
+<<<<<<< HEAD
 					"file": "resources/views/app.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 2749,
+=======
+					"file": "ProjetWEB.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 497,
+>>>>>>> Project/JM
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								1411,
 								1411
+=======
+								251,
+								251
+>>>>>>> Project/JM
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/PHP/PHP.tmLanguage",
+=======
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+>>>>>>> Project/JM
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 7.0,
@@ -765,11 +802,19 @@
 				},
 				{
 					"buffer": 1,
+<<<<<<< HEAD
 					"file": "app/Http/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1078,
+=======
+					"file": "app/Http/Controllers/TestXmlController.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1654,
+>>>>>>> Project/JM
 						"regions":
 						{
 						},
@@ -782,6 +827,7 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -839,6 +885,8 @@
 						],
 						"settings":
 						{
+=======
+>>>>>>> Project/JM
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
