@@ -30,12 +30,12 @@ class TestXmlController extends Controller {
 	 * @return Response
 	 */
 
-	public function recursiveCheckForChildren($array , $array2){
+	public function recursiveCheckForChildren($array , &$array2){
 
 
 				if ($array->count() == 0) {
 
-					echo $array->getName() . " : " . $array . "<br>";
+					// echo $array->getName() . " : " . $array . "<br>";
 
 					$arrayToAdd = array($array->getName() , $array);
 					array_push($array2, $arrayToAdd);
@@ -63,16 +63,17 @@ class TestXmlController extends Controller {
 
 			foreach($xml->children() as $client) { 
 
-				echo "-------------------- Client ------------------------<br>";
+				// echo "-------------------- Client ------------------------<br>";
 
 		    	foreach($client->children() as $field) { 
 				$this->recursiveCheckForChildren($field,$arrayToPassToJeanine);
 
 		    	 }
 
-		    	echo "<br><br>";
+		    	// echo "<br><br>";
 			} 
 
+			return view('test')->with('data', $arrayToPassToJeanine);
 	}
 
 }
