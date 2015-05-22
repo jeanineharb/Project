@@ -45,7 +45,9 @@ class EditorController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		//Get html string from modified template.
+		$data = $_POST['data'];
+		echo $data;
 	}
 
 	/**

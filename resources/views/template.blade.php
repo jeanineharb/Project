@@ -26,29 +26,34 @@ echo $temp->css;
 <script>
 function redirect(redirectUrl, arg, value) {
 	  var form = $('<form action="' + redirectUrl + '" method="post"' +
-	  '<input type="hidden" name="'+ arg +'" value="' + value + '"></input>' + '</form>');
+	  '<input type="hidden" name="'+ arg +'" value="' + value + '"></input>' +
+	  '<input type="hidden" name="_token" value="{{ csrf_token() }}" </form>');
 	  $('body').append(form);
 	  $(form).submit();
+
 }
 	
 function onSubmit(){
-		var data = "";
+		$data = "";
 		
 		for (var i in CKEDITOR.instances){
-			data += CKEDITOR.instances[i].getData();
+			$data += CKEDITOR.instances[i].getData();
 		}
 
 		//console.log(data);
 
-		var x = document.getElementsByTagName("field");
-		var i;
-		var att=[];
-		for (i = 0; i < x.length; i++) {
-			att[i]=x.item(i).attributes.getNamedItem("id").value;
-			console.log(att[i]);
-		}
+		// var x = document.getElementsByTagName("field");
+		// var i;
+		// var att=[];
+		// for (i = 0; i < x.length; i++) {
+		// 	att[i]=x.item(i).attributes.getNamedItem("id").value;
+		// 	console.log(att[i]);
+		// }
 
- 		//redirect("{{ asset('/ckeditor/samples/sample_posteddata.php')}}", "variable", data);
+ 		//redirect("{{ url('/save') }}", "data", data);
+
+ 		$_token = "{{ csrf_token() }}";
+		$.post( "{{ url('/save') }}", { data: $data,  _token: $_token })
 }
 
 

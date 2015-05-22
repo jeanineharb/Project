@@ -22,6 +22,8 @@ Route::get('/template', 'EditorController@index');
 Route::get('/template/new', 'EditorController@create');
 Route::get('/template/edit/{id}', array('as' => 'edit.temp', 'uses' =>'EditorController@edit'));
 
+Route::get('/save', 'EditorController@store');
+
 Route::get('upload', function() {
   return View::make('uploads.upload');
 });
