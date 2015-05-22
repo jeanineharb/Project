@@ -5,16 +5,17 @@ public function upload() {
 
 
     $allowed =  array('xml');
-    $filename = $_FILES['video_file']['name'];
+    $filename = $_FILES['userfile']['name'];
     $ext = pathinfo($filename, PATHINFO_EXTENSION);
     if(!in_array($ext,$allowed) ) {
         echo 'error';
     }
+      echo "stringa1";
 
-    if ($_FILES['userfile']['type']!="xml") {
-      echo $_FILES['userfile']['type'];
-      return;
-    }
+    // if ($_FILES['userfile']['type']!="xml") {
+    //   echo $_FILES['userfile']['type'];
+    //   return;
+    // }
       echo "stringa1";
 
       $uploaddir = './';

@@ -56,15 +56,6 @@ class TestXmlController extends Controller {
 
 	public function index()
 	{
-		//$file = Input::file('photo');
-
-		//echo $file->getClientOriginalName();
-
-// foreach ($array as $key => $value) {
-// 				echo $value;
-// 			}	
-// 			$s="mail";
-// 			$e="transactions";
 
 			$arrayToPassToJeanine = array();
 
