@@ -2,6 +2,7 @@
 
 use App\User;
 use Validator;
+use Mail;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
 class Registrar implements RegistrarContract {
@@ -27,13 +28,32 @@ class Registrar implements RegistrarContract {
 	 * @param  array  $data
 	 * @return User
 	 */
+
 	public function create(array $data)
-	{
+	{	
+
+//console.log("asdasdasd");
+
 		return User::create([
 			'name' => $data['name'],
 			'email' => $data['email'],
 			'password' => bcrypt($data['password']),
 		]);
+
+	$content = "Hi,welcome user!";
+
+	$data2 = [
+    'content' => $content
+	];
+
+	Mail::send('emails.mail-template', $data2, function($message) {
+
+    $message->to('mansour.hachem@hotmail.com', 'Jon Doe');
+    $message->subject('Welcome to the Laravel 4 Auth App!');
+    $message->from('kjhkjh@k.com', 'lm lm');
+
+});
+
 	}
 
 }

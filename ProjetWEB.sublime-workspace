@@ -184,66 +184,19 @@
 	"buffers":
 	[
 		{
-			"file": "Http/routes.php",
+			"contents": "2",
 			"settings":
 			{
-				"buffer_size": 1078,
-				"line_ending": "Unix"
+				"buffer_size": 1,
+				"line_ending": "Unix",
+				"name": "2"
 			}
 		},
 		{
-			"file": "/Users/macbook/Documents/Sites/Project/resources/views/app.blade.php",
+			"file": "ProjetWEB.sublime-project",
 			"settings":
 			{
-				"buffer_size": 2726,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/macbook/Documents/Sites/Project/resources/views/predefinedTemplates.blade.php",
-			"settings":
-			{
-				"buffer_size": 1264,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Http/Controllers/EditorController.php",
-			"settings":
-			{
-				"buffer_size": 1535,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/macbook/Documents/Sites/Project/resources/views/template.blade.php",
-			"settings":
-			{
-				"buffer_size": 1154,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "EmailCategory.php",
-			"settings":
-			{
-				"buffer_size": 472,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/macbook/Documents/Sites/Project/database/seeds/EmailCategorySeeder.php",
-			"settings":
-			{
-				"buffer_size": 1481,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Template.php",
-			"settings":
-			{
-				"buffer_size": 513,
+				"buffer_size": 207,
 				"line_ending": "Unix"
 			}
 		}
@@ -525,12 +478,17 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers",
-		"/Users/macbook/Documents/Sites/Project/resources/views",
-		"/Users/macbook/Documents/Sites/Project/database"
 	],
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Template.php",
+		"/Users/macbook/Documents/Sites/Project/database/seeds/EmailCategorySeeder.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/template.blade.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Http/Controllers/EditorController.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/predefinedTemplates.blade.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/app.blade.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Http/routes.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/EmailCategory.php",
 		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/HomeController.php",
 		"/Users/macbook/Documents/Sites/Project/database/seeds/TemplateSeeder.php",
 		"/Users/macbook/Documents/Sites/Project/resources/views/home.blade.php",
@@ -650,15 +608,7 @@
 		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/Object3d.cpp",
 		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ObjectGenerator3D.h",
 		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/main.cpp",
-		"/home/mansour/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/mansour/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/mansour/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/mansour/.config/sublime-text-3/Packages/Origami/Origami.sublime-settings",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ID3d.sublime-project",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ID3d.sublime-project~",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/IDS3D.sublime-project",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ObjectGenerator3D.cpp",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ObjectGenerator3D.h"
+		"/home/mansour/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
 	],
 	"find":
 	{
@@ -716,89 +666,32 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Http/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1078,
+						"buffer_size": 1,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								755,
-								755
+								1,
+								1
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"auto_name": "2",
+							"default_dir": "/Applications/XAMPP/xamppfiles/htdocs/Project/Http/Controllers",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/macbook/Documents/Sites/Project/resources/views/app.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2726,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1939,
-								1939
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/macbook/Documents/Sites/Project/resources/views/predefinedTemplates.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1055,
-								1055
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 11.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -806,82 +699,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Http/Controllers/EditorController.php",
+					"buffer": 1,
+					"file": "ProjetWEB.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1535,
+						"buffer_size": 207,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								321,
-								321
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 676.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/macbook/Documents/Sites/Project/resources/views/template.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1154,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								193,
-								193
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 35.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "EmailCategory.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 472,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								397,
-								397
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -889,63 +725,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/macbook/Documents/Sites/Project/database/seeds/EmailCategorySeeder.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1481,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								408,
-								408
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 178.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Template.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 513,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								503,
-								503
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
 					"type": "text"
 				}
 			]

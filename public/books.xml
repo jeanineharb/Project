@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bookstore>
-  <book category="COOKING">
-    <title lang="en">Everyday Italian</title>
-    <author>Giada De Laurentiis</author>
-    <year>2005</year>
-    <price>30.00</price>
-  </book>
-  <book category="CHILDREN">
-    <title lang="en">Harry Potter</title>
-    <author>J K. Rowling</author>
-    <year>2005</year>
-    <price>29.99</price>
-  </book>
-  <book category="WEB">
-    <title lang="en-us">XQuery Kick Start</title>
-    <author>James McGovern</author>
-    <year>2003</year>
-    <price>49.99</price>
-  </book>
-  <book category="WEB">
-    <title lang="en-us">Learning XML</title>
-    <author>Erik T. Ray</author>
-    <year>2003</year>
-    <price>39.95</price>
-  </book>
-</bookstore>
+<data>
+
+<client>
+
+  <mail>xxxxxx</mail>
+
+  <name>Jeanine Harb</name>
+  <accountNo>1</accountNo>
+
+     <transaction>
+        <transNo>1</transNo>
+        <transDate>2</transDate>
+        <value>3</value>
+     </transaction>
+
+     <transaction>
+        <transNo>4</transNo>
+        <transDate>5</transDate>
+        <value>6</value>
+     </transaction>
+
+    <transaction>
+        <transNo>7</transNo>
+        <transDate>8</transDate>
+        <value>9</value>
+    </transaction>
+
+</client>
+
+<client>
+
+    <mail>xxxxxx</mail>
+    <name>Mansour Hachem</name>
+
+</client>
+
+</data>
