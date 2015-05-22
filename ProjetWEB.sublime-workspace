@@ -184,19 +184,82 @@
 	"buffers":
 	[
 		{
-			"contents": "2",
+			"file": "resources/views/app.blade.php",
 			"settings":
 			{
-				"buffer_size": 1,
-				"line_ending": "Unix",
-				"name": "2"
+				"buffer_size": 2749,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "ProjetWEB.sublime-project",
+			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 207,
+				"buffer_size": 1078,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 757,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/WelcomeController.php",
+			"settings":
+			{
+				"buffer_size": 834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/welcome.blade.php",
+			"settings":
+			{
+				"buffer_size": 1321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/template.blade.php",
+			"settings":
+			{
+				"buffer_size": 1762,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/predefinedTemplates.blade.php",
+			"settings":
+			{
+				"buffer_size": 1704,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/EditorController.php",
+			"settings":
+			{
+				"buffer_size": 1535,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/editor.blade.php",
+			"settings":
+			{
+				"buffer_size": 916,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "database/seeds/DatabaseSeeder.php",
+			"settings":
+			{
+				"buffer_size": 524,
 				"line_ending": "Unix"
 			}
 		}
@@ -208,7 +271,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 181.0,
 		"last_filter": "insta",
 		"selected_items":
 		[
@@ -437,7 +500,7 @@
 				"Set Syntax: ActionScript"
 			]
 		],
-		"width": 449.0
+		"width": 453.0
 	},
 	"console":
 	{
@@ -478,21 +541,26 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/macbook/Documents/Sites/Project/resources/views",
+		"/Users/macbook/Documents/Sites/Project/database/seeds"
 	],
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/Project/Template.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/about.blade.php",
+		"/Users/macbook/Documents/Sites/Project/public/ckeditor/fullEditorWithCustomButton.js",
+		"/Users/macbook/Documents/Sites/Project/public/ckeditor/inlineEditorWithCustomButton.js",
 		"/Users/macbook/Documents/Sites/Project/database/seeds/EmailCategorySeeder.php",
-		"/Users/macbook/Documents/Sites/Project/resources/views/template.blade.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/Project/Http/Controllers/EditorController.php",
 		"/Users/macbook/Documents/Sites/Project/resources/views/predefinedTemplates.blade.php",
-		"/Users/macbook/Documents/Sites/Project/resources/views/app.blade.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/Project/Http/routes.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/Project/EmailCategory.php",
-		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/HomeController.php",
-		"/Users/macbook/Documents/Sites/Project/database/seeds/TemplateSeeder.php",
-		"/Users/macbook/Documents/Sites/Project/resources/views/home.blade.php",
 		"/Users/macbook/Documents/Sites/Project/resources/views/welcome.blade.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/navbar.blade.php",
+		"/Users/macbook/Documents/Sites/Project/public/ckeditor/config.js",
+		"/Users/macbook/Documents/Sites/Project/database/seeds/TemplateSeeder.php",
+		"/Users/macbook/Documents/Sites/Project/Template.php",
+		"/Users/macbook/Documents/Sites/Project/Http/Controllers/EditorController.php",
+		"/Users/macbook/Documents/Sites/Project/Http/routes.php",
+		"/Users/macbook/Documents/Sites/Project/EmailCategory.php",
+		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/HomeController.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/home.blade.php",
 		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/WelcomeController.php",
 		"/Users/macbook/Desktop/logique.c",
 		"/Users/macbook/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -605,10 +673,7 @@
 		"/home/mansour/Dropbox/2INF/Architecture Des ordinateurs/lexique",
 		"/home/mansour/Dropbox/2INF/Architecture Des ordinateurs/Notes_Final",
 		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/CompileExecute.sh",
-		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/Object3d.cpp",
-		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ObjectGenerator3D.h",
-		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/main.cpp",
-		"/home/mansour/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/Object3d.cpp"
 	],
 	"find":
 	{
@@ -616,7 +681,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
 		]
@@ -666,65 +731,295 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "resources/views/app.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1,
+						"buffer_size": 2749,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1,
-								1
+								1411,
+								1411
 							]
 						],
 						"settings":
 						{
-							"auto_name": "2",
-							"default_dir": "/Applications/XAMPP/xamppfiles/htdocs/Project/Http/Controllers",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 7.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								528,
+								528
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "ProjetWEB.sublime-project",
+					"buffer": 2,
+					"file": "app/Http/Controllers/HomeController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 207,
+						"buffer_size": 757,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								753,
+								753
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/Http/Controllers/WelcomeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								830,
+								830
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/views/welcome.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1217,
+								1236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "resources/views/template.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1730,
+								1730
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 365.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "resources/views/predefinedTemplates.blade.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1704,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 88.0,
+						"translation.y": 246.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/Http/Controllers/EditorController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "resources/views/editor.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "database/seeds/DatabaseSeeder.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								308,
+								413
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
