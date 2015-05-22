@@ -22,6 +22,7 @@ class TestXmlController extends Controller {
 	public function __construct()
 	{
 		$this->middleware('guest');
+
 	}
 
 	/**
@@ -56,8 +57,8 @@ class TestXmlController extends Controller {
 
 	public function index()
 	{
-
 			$arrayToPassToJeanine = array();
+
 
 			$xml=simplexml_load_file("books.xml") or die("Error: Cannot create object");
 
@@ -66,14 +67,29 @@ class TestXmlController extends Controller {
 				// echo "-------------------- Client ------------------------<br>";
 
 		    	foreach($client->children() as $field) { 
-				$this->recursiveCheckForChildren($field,$arrayToPassToJeanine);
+
+				$this->recursiveCheckForChildren($field , $arrayToPassToJeanine);
+
 
 		    	 }
 
 		    	// echo "<br><br>";
 			} 
 
+<<<<<<< Updated upstream
 			return view('test')->with('data', $arrayToPassToJeanine);
 	}
+=======
+			echo "string";
+>>>>>>> Stashed changes
 
+			foreach($arrayToPassToJeanine as $petit) { 
+
+			echo "string2";
+
+				echo $petit." <br>";
+
+			}
+	}
 }
+
