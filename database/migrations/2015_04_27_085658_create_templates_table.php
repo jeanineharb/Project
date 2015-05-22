@@ -17,7 +17,10 @@ class CreateTemplatesTable extends Migration {
 			$table->increments ('templateId');
 			
 			$table->integer('category')->unsigned();
-			$table->foreign ('category')->references('categoryId')->on('email_categories');
+			$table->foreign('category')->references('categoryId')->on('email_categories');
+
+			$table->integer('user')->unsigned();
+			$table->foreign('user')->references('id')->on('users');
 			
 			$table->string('templateName');
 			$table->boolean('isFavorite');
