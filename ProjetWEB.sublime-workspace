@@ -184,19 +184,18 @@
 	"buffers":
 	[
 		{
-			"contents": "2",
-			"settings":
-			{
-				"buffer_size": 1,
-				"line_ending": "Unix",
-				"name": "2"
-			}
-		},
-		{
 			"file": "ProjetWEB.sublime-project",
 			"settings":
 			{
-				"buffer_size": 207,
+				"buffer_size": 497,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/TestXmlController.php",
+			"settings":
+			{
+				"buffer_size": 1654,
 				"line_ending": "Unix"
 			}
 		}
@@ -478,6 +477,9 @@
 	},
 	"expanded_folders":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/app/Http/Controllers",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Miscellaneous",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Config"
 	],
 	"file_history":
 	[
@@ -671,25 +673,25 @@
 			[
 				{
 					"buffer": 0,
+					"file": "ProjetWEB.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1,
+						"buffer_size": 497,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1,
-								1
+								251,
+								251
 							]
 						],
 						"settings":
 						{
-							"auto_name": "2",
-							"default_dir": "/Applications/XAMPP/xamppfiles/htdocs/Project/Http/Controllers",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -700,11 +702,11 @@
 				},
 				{
 					"buffer": 1,
-					"file": "ProjetWEB.sublime-project",
-					"semi_transient": false,
+					"file": "app/Http/Controllers/TestXmlController.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 207,
+						"buffer_size": 1654,
 						"regions":
 						{
 						},
@@ -717,7 +719,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
