@@ -2,10 +2,10 @@
 
 @section('content')
 
-@foreach($data as $d)
-	<p> {{ $d[0]}}  {{ $d[1]}}</p>
+{{ $data }}
 
-@endforeach
+hi!
+
 
 
 @endsection

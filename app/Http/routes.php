@@ -21,8 +21,12 @@ Route::get('/testXml', 'TestXmlController@index');
 Route::get('/template', 'EditorController@index');
 Route::get('/template/new', 'EditorController@create');
 Route::get('/template/edit/{id}', array('as' => 'edit.temp', 'uses' =>'EditorController@edit'));
+Route::any('/template/save', array('as' => 'save.temp', 'uses' =>'EditorController@store'));
 
-Route::get('/save', 'EditorController@store');
+Route::get('test/{data}', function($data) {
+  return View::make('test')->with('data', $data);
+});
+
 
 Route::get('upload', function() {
   return View::make('uploads.upload');

@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Template;
 use App\EmailCategory;
 
+use Input;
+
 class EditorController extends Controller {
 
 	/**
@@ -46,8 +48,19 @@ class EditorController extends Controller {
 	public function store()
 	{
 		//Get html string from modified template.
-		$data = $_POST['data'];
-		echo $data;
+		$data = Input::all();
+		$c = "hola";
+
+		return url('/test/'.$c);
+		// echo "hello";
+		// print_r($data);
+		// return view('test')->with('data', $data);
+		// Redirect::route('test', array('data' => $data));
+		// Redirect::to($url, array('data'=>$data));
+		// Redirect::to($url)->withInput();
+		// echo implode(" ",$data);
+		// echo "hi";
+		// return View::make('test')->with('data', $d);
 	}
 
 	/**
