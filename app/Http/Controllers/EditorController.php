@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Template;
 use App\EmailCategory;
 
+use Input;
+
 class EditorController extends Controller {
 
 	/**
@@ -43,11 +45,14 @@ class EditorController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
 		//Get html string from modified template.
-		$data = $_POST['data'];
-		echo $data;
+		$data = $request->all();
+		// echo $data;
+		echo implode(" ",$data);
+
+		echo "hi";
 	}
 
 	/**
