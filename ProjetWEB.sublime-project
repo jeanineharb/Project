@@ -17,43 +17,10 @@
 			"name": "Controllers",
 			"path": "app/Http/Controllers"
 		},
-<<<<<<< HEAD
-		{
-			"file_include_patterns":
-			[
-				"*.php"
-			],
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
-			"name": "Miscellaneous",
-			"path": "public"
-=======
-			{
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
-			"name": "Miscellaneous",
-			"path": "./Miscellaneous/"
-
-		},
-		{
-		
-			"name": "Config",
-			"path": "./Config/"
-
-		},
 		{
 		
 			"name": "Database",
 			"path": "./database/"
-
->>>>>>> Project/JM
-		},
-		{
-			"path": "database"
 		}
 	]
 }
