@@ -57,8 +57,6 @@ class EditorController extends Controller {
 	{
 		//Get html string from modified template.
 		$data = Input::all();
-		$c = "Saved";
-
 		$userId = Auth::id();
 		$nb = DB::table('user_templates')->where('user', $userId)->count() + 1;
 
@@ -81,10 +79,10 @@ class EditorController extends Controller {
   // 		}
 
 		if($data['action'] == "Save"){
-			return url('/save/'.$c);
+			return url('/template');
 		}
 		else{
-			return url('/template');
+			return url('/upload/'.$userId);
 		}
 
 		// print_r($data);
