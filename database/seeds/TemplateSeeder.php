@@ -34,7 +34,7 @@ class TemplateSeeder extends Seeder {
 		$temp->isFavorite = '1';
 		$temp->isPredefined = '1';
 		$temp->html = '
-					<div id="header" contenteditable="true">
+					<div id="header">
 						<div id="headerLeft">
 							<h2 id="sampleTitle">
 								BIG<br> Title!
@@ -54,7 +54,7 @@ class TemplateSeeder extends Seeder {
 							</div>
 						</div>
 					</div>
-					<div id="columns" contenteditable="true">
+					<div id="columns">
 						<div id="column1">
 							<div>
 								<h3>
@@ -108,10 +108,6 @@ class TemplateSeeder extends Seeder {
 		
 		$temp->css = '
 				<style>
-						*[contenteditable="true"]{
-							padding: 10px;
-						}
-				
 						#container{
 							width: 960px;
 							margin: 30px auto 0;
@@ -216,7 +212,6 @@ class TemplateSeeder extends Seeder {
 		$temp->isFavorite = '1';
 		$temp->isPredefined = '1';
 		$temp->html = '
-			<div id="editable" contenteditable="true">
 			<h1 style="text-align: center;" > Apollo 11 </h1>
 			
 			<div style="padding: 5px;">
@@ -283,15 +278,9 @@ class TemplateSeeder extends Seeder {
 
 			<hr />
 			<p style="text-align: right;"><small>Source: <a href="http://en.wikipedia.org/wiki/Apollo_11">Wikipedia.org</a></small></p>
-			</div>
 			</div>';
 
-		$temp->css = '<style>
-			#editable{
-				padding: 10px;
-				float: left;
-			}
-			</style>';
+		$temp->css = '';
 		$temp->save();
 		
 	}

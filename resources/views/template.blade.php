@@ -16,10 +16,20 @@
 		</div>
 </div>
 
+<div contenteditable="true">
+
 <?php
 echo $temp->html;
 echo $temp->css;
 ?>
+
+<style type="text/css">
+	*[contenteditable="true"]{
+		padding: 10px;
+	}
+</style>
+
+</div>
 
 <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
 <script src="{{ asset('/ckeditor/inlineEditorWithCustomButton.js') }}"></script>
