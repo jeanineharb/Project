@@ -38,7 +38,8 @@ echo $temp->css;
 // console.log(att[i]);
 
 $(document).ready(function() {
-	$('#tempForm').on("click", ":submit", function(e){
+	$('#tempForm').click(function(e){
+	// $('#tempForm').on("click", ":submit", function(e){
 		e.preventDefault();
 
 		var $d = "";
@@ -48,6 +49,7 @@ $(document).ready(function() {
 
 		var $post = {};
 		$post.action = $(this).val();
+		$post.cat = '<?php echo $temp->category; ?>';
 		$post.html = $d;
 		$post.css = '<?php echo str_replace("\n", "\\n", $temp->css);?>';
 		$post._token = $('input[name=_token]').val();

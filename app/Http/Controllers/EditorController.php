@@ -7,10 +7,23 @@ use Illuminate\Http\Request;
 
 use App\Template;
 use App\EmailCategory;
+use App\UserTemplate;
 
 use Input;
+use Auth;
+use DB;
 
 class EditorController extends Controller {
+
+	/**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -19,15 +32,8 @@ class EditorController extends Controller {
 	 */
 	public function index()
 	{
-		
-		// $cat = Template::find(1)->category();
-
-		// return view('predefinedTemplates')->with('cat', $cat);
-		// $templates = Template::all();
 		$cat = EmailCategory::all();
 		return view('predefinedTemplates')->with('cat', $cat);
-
-		// return view('predefinedTemplates');
 	}
 
 	/**
@@ -49,7 +55,24 @@ class EditorController extends Controller {
 	{
 		//Get html string from modified template.
 		$data = Input::all();
-		$c = "hola";
+		$c = "Saved";
+
+		$userId = Auth::id();
+		$nb = DB::table('user_templates')->where('user', $userId)->count() + 1;
+
+		$temp = new Template;
+		$temp->category = $data['cat'];
+		$temp->templateName = 'Custom Template #'.$nb;
+		$temp->isFavorite = '0';
+		$temp->isPredefined = '0';
+		$temp->html = $data['html'];
+		$temp->css = $data['css'];
+		$temp->save();
+
+		$ut = new UserTemplate;
+		$ut->user = $userId;
+		$ut->template = $temp->templateId;
+		$ut->save();
 
 		// foreach ($data as $name => $value) {
   //     		echo "$name: $value\n";

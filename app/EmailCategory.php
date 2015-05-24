@@ -16,6 +16,6 @@ class EmailCategory extends Model {
 	}
 	
 	public function predefinedTemplates(){
-		return $this->templates()->where('isPredefined', '=', 'Yes');
+		return $this->templates()->where('isPredefined', 1);
 	}
 }
