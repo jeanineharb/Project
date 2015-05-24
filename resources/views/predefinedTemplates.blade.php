@@ -44,9 +44,10 @@
 						</div>
 					@endforeach
 					</div>
-				@elseif(! $ut->isEmpty())
+				@elseif( (!$ut->isEmpty()) && $c->categoryId == 1)
 					<div class="row">
-					@foreach ($ut->temps as $t)
+					@foreach ($ut as $u)
+					@foreach ($u->temps as $t)
 						<div class="col-xs-18 col-sm-6 col-md-3">
 							<div class="thumbnail">
 								<img src="http://placehold.it/500x300" alt="500x300">
@@ -57,6 +58,7 @@
 								</div>
 							</div>
 						</div>
+					@endforeach
 					@endforeach
 					</div>
 				@else
