@@ -32,27 +32,45 @@ class Registrar implements RegistrarContract {
 	public function create(array $data)
 	{	
 
-//console.log("asdasdasd");
+	$content = "Hi ".$data['name'].", welcome to the most advanced mail dispatcher in human history.";
+
+	$data2 = [
+
+    'content' => $content,
+
+
+	];
+
+	$user = [
+
+    'name' => $data['name'],
+	'email' => $data['email'],
+
+	];
+
+	if(!Mail::send('emails.mail-template', $data2, function($message) use($user){
+
+    $message->to($user['email'] , $user['name']);
+
+    $message->subject('Welcome to Xpedit!');
+
+    $message->from('info@emailtemplateproject.com', 'Xpedit');
+
+	})){
+		echo "wrong mail";
+		return;
+	}
 
 		return User::create([
+
 			'name' => $data['name'],
 			'email' => $data['email'],
 			'password' => bcrypt($data['password']),
+
 		]);
 
-	$content = "Hi,welcome user!";
 
-	$data2 = [
-    'content' => $content
-	];
 
-	Mail::send('emails.mail-template', $data2, function($message) {
-
-    $message->to('mansour.hachem@hotmail.com', 'Jon Doe');
-    $message->subject('Welcome to the Laravel 4 Auth App!');
-    $message->from('kjhkjh@k.com', 'lm lm');
-
-});
 
 	}
 
