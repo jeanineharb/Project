@@ -17,12 +17,13 @@ class CreateTemplatesTable extends Migration {
 			$table->increments ('templateId');
 			
 			$table->integer('category')->unsigned();
-			$table->foreign ('category')->references('categoryId')->on('email_categories');
+			$table->foreign('category')->references('categoryId')->on('email_categories');
 			
 			$table->string('templateName');
 			$table->boolean('isFavorite');
 			$table->boolean('isPredefined');
 			$table->longtext('html');
+			$table->longtext('css');
 			$table->timestamps();
 		});
 	}

@@ -13,13 +13,24 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/home', 'HomeController@index');
-Route::get('/about', 'WelcomeController@index');
+Route::get('/about', 'WelcomeController@about');
 
 Route::get('/testMail', 'TestMailController@index');
 Route::get('/testXml', 'TestXmlController@index');
 
-Route::get('/editor', 'EditorController@create');
-Route::get('/temp', 'EditorController@index');
+Route::get('/template', 'EditorController@index');
+Route::get('/template/new', 'EditorController@create');
+Route::get('/template/edit/{id}', array('as' => 'edit.temp', 'uses' =>'EditorController@edit'));
+Route::any('/template/save', array('as' => 'save.temp', 'uses' =>'EditorController@store'));
+
+
+Route::get('save/{data}', function($data) {
+  return View::make('save')->with('data', $data);
+});
+
+Route::any('upload', 'UploadFileController@upload');
+
+Route::any('postupload', 'UploadFileController@postupload');
 
 
 Route::controllers([

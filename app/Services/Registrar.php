@@ -2,6 +2,7 @@
 
 use App\User;
 use Validator;
+use Mail;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
 class Registrar implements RegistrarContract {
@@ -27,13 +28,50 @@ class Registrar implements RegistrarContract {
 	 * @param  array  $data
 	 * @return User
 	 */
+
 	public function create(array $data)
-	{
+	{	
+
+	$content = "Hi ".$data['name'].", welcome to the most advanced mail dispatcher in human history.";
+
+	$data2 = [
+
+    'content' => $content,
+
+
+	];
+
+	$user = [
+
+    'name' => $data['name'],
+	'email' => $data['email'],
+
+	];
+
+	if(!Mail::send('emails.mail-template', $data2, function($message) use($user){
+
+    $message->to($user['email'] , $user['name']);
+
+    $message->subject('Welcome to Xpedit!');
+
+    $message->from('info@emailtemplateproject.com', 'Xpedit');
+
+	})){
+		echo "wrong mail";
+		return;
+	}
+
 		return User::create([
+
 			'name' => $data['name'],
 			'email' => $data['email'],
 			'password' => bcrypt($data['password']),
+
 		]);
+
+
+
+
 	}
 
 }

@@ -32,11 +32,12 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		$msg='';
-		if(DB::connection()->getDatabaseName()){
-			$msg = "Yes! successfully connected to the DB: " . DB::connection()->getDatabaseName();
-		}
-		return view('welcome')->with('msg', $msg);
+		return view('welcome');
+	}
+
+	public function about()
+	{
+		return view('about');
 	}
 
 }

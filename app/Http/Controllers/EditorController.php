@@ -5,7 +5,25 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Template;
+use App\EmailCategory;
+use App\UserTemplate;
+
+use Input;
+use Auth;
+use DB;
+
 class EditorController extends Controller {
+
+	/**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +32,8 @@ class EditorController extends Controller {
 	 */
 	public function index()
 	{
-		return view('template');
+		$cat = EmailCategory::all();
+		return view('predefinedTemplates')->with('cat', $cat);
 	}
 
 	/**
@@ -34,7 +53,45 @@ class EditorController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		//Get html string from modified template.
+		$data = Input::all();
+		$c = "Saved";
+
+		$userId = Auth::id();
+		$nb = DB::table('user_templates')->where('user', $userId)->count() + 1;
+
+		$temp = new Template;
+		$temp->category = $data['cat'];
+		$temp->templateName = 'Custom Template #'.$nb;
+		$temp->isFavorite = '0';
+		$temp->isPredefined = '0';
+		$temp->html = $data['html'];
+		$temp->css = $data['css'];
+		$temp->save();
+
+		$ut = new UserTemplate;
+		$ut->user = $userId;
+		$ut->template = $temp->templateId;
+		$ut->save();
+
+		// foreach ($data as $name => $value) {
+  //     		echo "$name: $value\n";
+  // 		}
+
+		if($data['action'] == "Save"){
+			return url('/save/'.$c);
+		}
+		else{
+			return url('/template');
+		}
+
+		// print_r($data);
+		// return view('test')->with('data', $data);
+		// Redirect::route('test', array('data' => $data));
+		// Redirect::to($url, array('data'=>$data));
+		// Redirect::to($url)->withInput();
+		// echo implode(" ",$data);
+		// return View::make('test')->with('data', $d);
 	}
 
 	/**
@@ -56,7 +113,8 @@ class EditorController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$temp = Template::where('templateId', '=', $id)->get()->first();
+		return view('template')->with('temp', $temp);
 	}
 
 	/**

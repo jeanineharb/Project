@@ -3,8 +3,10 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
+use database\seeds\UserSeeder;
 use database\seeds\EmailCategorySeeder;
 use database\seeds\TemplateSeeder;
+use database\seeds\UserTemplateSeeder;
 
 class DatabaseSeeder extends Seeder {
 
@@ -17,11 +19,17 @@ class DatabaseSeeder extends Seeder {
 	{
 		//Model::unguard();
 
-		//$this->call('EmailCategorySeeder');
-        //$this->command->info('email_categories table seeded!');
+		// $this->call('UserSeeder');
+		// $this->command->info('users table seeded!');
+
+		// $this->call('EmailCategorySeeder');
+		// $this->command->info('email_categories table seeded!');
         
         $this->call('TemplateSeeder');
         $this->command->info('templates table seeded!');
+
+        $this->call('UserTemplateSeeder');
+		$this->command->info('user_templates table seeded!');
         
 	}
 

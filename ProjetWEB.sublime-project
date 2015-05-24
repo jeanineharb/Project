@@ -2,32 +2,25 @@
 	"folders":
 	[
 		{
-			"folder_include_patterns":
+			"file_include_patterns":
 			[
 				"*.php"
 			],
 			"name": "Views",
-			"path": "./resources/views"
+			"path": "resources/views"
 		},
 		{
 			"folder_include_patterns":
 			[
 				"*.php"
 			],
-			"name": "Constrollers",
-			"path": "./app/Http/Controllers"
+			"name": "Controllers",
+			"path": "app/Http/Controllers"
 		},
-				{
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
-			"file_include_patterns":
-			[
-				"*.php"
-			],
-			"name": "Miscellaneous",
-			"path": "./public/"
-		},
+		{
+		
+			"name": "Database",
+			"path": "./database/"
+		}
 	]
 }

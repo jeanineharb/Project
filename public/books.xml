@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+
+<client>
+
+  <mail>xxxxxx</mail>
+
+  <name>Jeanine Harb</name>
+  <accountNo>1</accountNo>
+
+     <transaction>
+        <transNo>1</transNo>
+        <transDate>2</transDate>
+        <value>3</value>
+     </transaction>
+
+     <transaction>
+        <transNo>4</transNo>
+        <transDate>5</transDate>
+        <value>6</value>
+     </transaction>
+
+    <transaction>
+        <transNo>7</transNo>
+        <transDate>8</transDate>
+        <value>9</value>
+    </transaction>
+
+</client>
+
+<client>
+
+    <mail>xxxxxx</mail>
+    <name>Mansour Hachem</name>
+
+</client>
+
+</data>

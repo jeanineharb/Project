@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-align"
+			],
+			[
+				"temp",
+				"templates"
+			],
+			[
+				"cat",
+				"categoryId"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"templ",
+				"templateName"
+			],
+			[
+				"catego",
+				"categoryName"
+			],
+			[
+				"te",
+				"temp"
+			],
+			[
+				"tem",
+				"templates"
+			],
+			[
 				"TEST",
 				"TestMailController@index"
 			],
@@ -152,10 +184,11 @@
 	"buffers":
 	[
 		{
-			"file": "app/Http/Controllers/TestXmlController.php",
+<<<<<<< HEAD
+			"file": "resources/views/app.blade.php",
 			"settings":
 			{
-				"buffer_size": 997,
+				"buffer_size": 2749,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,7 +196,54 @@
 			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 787,
+				"buffer_size": 1078,
+=======
+			"file": "ProjetWEB.sublime-project",
+			"settings":
+			{
+				"buffer_size": 497,
+>>>>>>> Project/JM
+				"line_ending": "Unix"
+			}
+		},
+		{
+<<<<<<< HEAD
+			"file": "app/Http/Controllers/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 757,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/WelcomeController.php",
+			"settings":
+			{
+				"buffer_size": 834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/welcome.blade.php",
+			"settings":
+			{
+				"buffer_size": 1321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/template.blade.php",
+			"settings":
+			{
+				"buffer_size": 1762,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/predefinedTemplates.blade.php",
+			"settings":
+			{
+				"buffer_size": 1704,
 				"line_ending": "Unix"
 			}
 		},
@@ -171,42 +251,30 @@
 			"file": "app/Http/Controllers/EditorController.php",
 			"settings":
 			{
-				"buffer_size": 1116,
+				"buffer_size": 1535,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config/mail.php",
+			"file": "resources/views/editor.blade.php",
 			"settings":
 			{
-				"buffer_size": 374,
+				"buffer_size": 916,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/TestMailController.php",
+			"file": "database/seeds/DatabaseSeeder.php",
 			"settings":
 			{
-				"buffer_size": 994,
+				"buffer_size": 524,
+=======
+			"file": "app/Http/Controllers/TestXmlController.php",
+			"settings":
+			{
+				"buffer_size": 1654,
+>>>>>>> Project/JM
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/Controller.php",
-			"settings":
-			{
-				"buffer_size": 298,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nTheme - Afterglow:\n-----------------\n\n  v. 2.1.1\n  \n  Sidebar folder and files align fix. Thanks to Rutger Schimmel (@indri-indri).\n  \n  ",
-			"settings":
-			{
-				"buffer_size": 188,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"scratch": true
 			}
 		}
 	],
@@ -217,10 +285,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 169.0,
-		"last_filter": "",
+		"height": 181.0,
+		"last_filter": "insta",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"contro",
+				"Package Control: Install Package"
+			],
 			[
 				"git blma",
 				"Git: Blame"
@@ -394,10 +470,6 @@
 				"Preferences: Browse Packages"
 			],
 			[
-				"insta",
-				"Preferences: Terminal Settings – Default"
-			],
-			[
 				"javata",
 				"Javatar: Browse Commands..."
 			],
@@ -442,7 +514,7 @@
 				"Set Syntax: ActionScript"
 			]
 		],
-		"width": 826.0
+		"width": 453.0
 	},
 	"console":
 	{
@@ -483,12 +555,39 @@
 	},
 	"expanded_folders":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/Project/resources/views",
+<<<<<<< HEAD
+		"/Users/macbook/Documents/Sites/Project/resources/views",
+		"/Users/macbook/Documents/Sites/Project/database/seeds"
+=======
 		"/Applications/XAMPP/xamppfiles/htdocs/Project/app/Http/Controllers",
-		"/Applications/XAMPP/xamppfiles/htdocs/Project/public"
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Miscellaneous",
+		"/Applications/XAMPP/xamppfiles/htdocs/Project/Config"
+>>>>>>> Project/JM
 	],
 	"file_history":
 	[
+		"/Users/macbook/Documents/Sites/Project/resources/views/about.blade.php",
+		"/Users/macbook/Documents/Sites/Project/public/ckeditor/fullEditorWithCustomButton.js",
+		"/Users/macbook/Documents/Sites/Project/public/ckeditor/inlineEditorWithCustomButton.js",
+		"/Users/macbook/Documents/Sites/Project/database/seeds/EmailCategorySeeder.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/predefinedTemplates.blade.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/welcome.blade.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/navbar.blade.php",
+		"/Users/macbook/Documents/Sites/Project/public/ckeditor/config.js",
+		"/Users/macbook/Documents/Sites/Project/database/seeds/TemplateSeeder.php",
+		"/Users/macbook/Documents/Sites/Project/Template.php",
+		"/Users/macbook/Documents/Sites/Project/Http/Controllers/EditorController.php",
+		"/Users/macbook/Documents/Sites/Project/Http/routes.php",
+		"/Users/macbook/Documents/Sites/Project/EmailCategory.php",
+		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/HomeController.php",
+		"/Users/macbook/Documents/Sites/Project/resources/views/home.blade.php",
+		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/WelcomeController.php",
+		"/Users/macbook/Desktop/logique.c",
+		"/Users/macbook/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/TestXmlController.php",
+		"/Users/macbook/Documents/Sites/Project/config/mail.php",
+		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/TestMailController.php",
+		"/Users/macbook/Documents/Sites/Project/app/Http/Controllers/Controller.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/Project/app/Http/Controllers/TestMailController.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/Project/app/Http/Controllers/books.xml",
 		"/Applications/XAMPP/xamppfiles/htdocs/Project/ProjetWEB.sublime-project",
@@ -594,29 +693,7 @@
 		"/home/mansour/Dropbox/2INF/Architecture Des ordinateurs/lexique",
 		"/home/mansour/Dropbox/2INF/Architecture Des ordinateurs/Notes_Final",
 		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/CompileExecute.sh",
-		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/Object3d.cpp",
-		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ObjectGenerator3D.h",
-		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/main.cpp",
-		"/home/mansour/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/mansour/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/mansour/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/mansour/.config/sublime-text-3/Packages/Origami/Origami.sublime-settings",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ID3d.sublime-project",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ID3d.sublime-project~",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/IDS3D.sublime-project",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ObjectGenerator3D.cpp",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/ObjectGenerator3D.h",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/Object3d.cpp",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/main.cpp",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/Image.h",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/Image.cpp",
-		"/Users/mansourhachem/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/IDS3D.sublime-project",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/main.cpp",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/ObjectGenerator3D.cpp",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/Matrix3.h",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/Object3d.h",
-		"/Users/mansourhachem/Dropbox/2INF/Images De Synthese 3D/ImagesDeSynthèse3D/ImagesDeSynthèse3D/IDS3D.sublime-workspace"
+		"/home/mansour/Dropbox/2INF/Images De Synthese 3D/TP3-Mansour Hachem 2INF/SourceCode/Object3d.cpp"
 	],
 	"find":
 	{
@@ -624,7 +701,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
 		]
@@ -634,6 +711,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"())\n",
 			"false",
 			"mail",
 			"inser",
@@ -673,24 +751,107 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Http/Controllers/TestXmlController.php",
+<<<<<<< HEAD
+					"file": "resources/views/app.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 997,
+						"buffer_size": 2749,
+=======
+					"file": "ProjetWEB.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 497,
+>>>>>>> Project/JM
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								771,
-								774
+<<<<<<< HEAD
+								1411,
+								1411
+=======
+								251,
+								251
+>>>>>>> Project/JM
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+=======
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+>>>>>>> Project/JM
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 7.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+<<<<<<< HEAD
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1078,
+=======
+					"file": "app/Http/Controllers/TestXmlController.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1654,
+>>>>>>> Project/JM
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								528,
+								528
+							]
+						],
+						"settings":
+						{
+<<<<<<< HEAD
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/HomeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								753,
+								753
 							]
 						],
 						"settings":
@@ -702,56 +863,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/Http/routes.php",
+					"buffer": 3,
+					"file": "app/Http/Controllers/WelcomeController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 787,
+						"buffer_size": 834,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								782,
-								782
+								830,
+								830
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Http/Controllers/EditorController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1116,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								304,
-								304
-							]
-						],
-						"settings":
-						{
+=======
+>>>>>>> Project/JM
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -763,48 +898,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "config/mail.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								15,
-								15
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "app/Http/Controllers/TestMailController.php",
+					"file": "resources/views/welcome.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 994,
+						"buffer_size": 1321,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								813,
-								813
+								1217,
+								1236
 							]
 						],
 						"settings":
@@ -813,27 +920,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 21.0,
+						"translation.y": 185.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "app/Http/Controllers/Controller.php",
+					"file": "resources/views/template.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 298,
+						"buffer_size": 1762,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1730,
+								1730
 							]
 						],
 						"settings":
@@ -841,39 +948,126 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 365.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"semi_transient": false,
+					"file": "resources/views/predefinedTemplates.blade.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 188,
+						"buffer_size": 1704,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								188,
-								188
+								243,
+								239
 							]
 						],
 						"settings":
 						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 88.0,
+						"translation.y": 246.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/Http/Controllers/EditorController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "resources/views/editor.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "database/seeds/DatabaseSeeder.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								308,
+								413
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -956,7 +1150,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 173.0,
+	"side_bar_width": 251.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

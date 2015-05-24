@@ -3,28 +3,85 @@
 @section('content')
 
 <div class="row">
-  <div class="col-xs-6 col-md-4"></div>
-  <div class="col-xs-6 col-md-4" style="text-align: center;" contenteditable="true">
-  	<h1>
-	  	<?php 
-	  		use App\Template;
-	  		$temp = Template::find(1)->pluck('templateName');
-	  		echo $temp;
-	  	?>
-  	</h1>
-  </div>
-  <div class="col-xs-6 col-md-4" style="text-align: right;">
-  	<button type="button" class="btn btn-default">Discard</button>
-  	<button type="button" class="btn btn-default">Save</button>
-  </div>
-	
+	<div class="col-xs-6 col-md-4"></div>
+		<div class="col-xs-6 col-md-4" style="text-align: center;">
+			<h1> {{ $temp->templateName }} </h1>
+		</div>
+		<div class="col-xs-6 col-md-4" style="text-align: right;">
+			<?php echo Form::open(['id' => 'tempForm']); ?>
+
+ 			<button type="button" class="btn btn-default" onclick="discard()">Discard</button>
+
+			<?php echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'style' => 'margin-right: 3px;']); 
+				  echo Form::submit('Send', ['class' => 'btn btn-success', 'id' => 'send']); 
+				  echo Form::close(); ?>
+		</div>
 </div>
 
 <?php
-$temp = Template::find(1)->pluck('html');
-echo $temp;
+echo $temp->html;
+echo $temp->css;
 ?>
+
 <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
 <script src="{{ asset('/ckeditor/inlineEditorWithCustomButton.js') }}"></script>
-					
+<script src="{{ asset('/bootbox.min.js') }}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+
+// var x = document.getElementsByTagName("field");
+// var i;
+// var att=[];
+// for (i = 0; i < x.length; i++) {
+// att[i]=x.item(i).attributes.getNamedItem("id").value;
+// console.log(att[i]);
+
+$(document).ready(function() {
+	$('#tempForm').click(function(e){
+	// $('#tempForm').on("click", ":submit", function(e){
+		e.preventDefault();
+
+		var $d = "";
+		for (var i in CKEDITOR.instances){
+			$d += CKEDITOR.instances[i].getData();
+		}
+
+		var $post = {};
+		$post.action = $(this).val();
+		$post.cat = '<?php echo $temp->category; ?>';
+		$post.html = $d;
+		$post.css = '<?php echo str_replace("\n", "\\n", $temp->css);?>';
+		$post._token = $('input[name=_token]').val();
+
+		var $url = "{{ route('save.temp') }}"
+
+		console.log($post);
+
+		$.ajax({
+			url: $url,
+			data: $post,
+			method: 'POST',
+			success: function(response){
+				window.location.href = response;
+				// console.log(response);
+			}
+		});
+	});
+});
+
+
+function discard(){
+	bootbox.confirm("Are you sure you want to discard your changes?", function(result){
+		if(result){
+			top.location.href = "{{ url('/template') }}";
+		}
+		else{
+			bootbox.hideAll();
+		}
+	}); 
+}
+</script>
+
+
 @endsection
