@@ -15,4 +15,7 @@ class EmailCategory extends Model {
 		return $this->hasMany('App\Template', 'category', 'categoryId');
 	}
 	
+	public function predefinedTemplates(){
+		return $this->templates()->where('isPredefined', '=', 'Yes');
+	}
 }

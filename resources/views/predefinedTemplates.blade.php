@@ -28,9 +28,9 @@
 	  				{{ $c->categoryDesc }}
 				</div>
 
-				@if(! $c->templates->isEmpty())
+				@if(! $c->predefinedTemplates->isEmpty())
 					<div class="row">
-					@foreach ($c->templates as $t)
+					@foreach ($c->predefinedTemplates as $t)
 						<div class="col-xs-18 col-sm-6 col-md-3">
 							<div class="thumbnail">
 								<img src="http://placehold.it/500x300" alt="500x300">
