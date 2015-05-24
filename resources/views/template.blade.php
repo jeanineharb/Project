@@ -7,12 +7,18 @@
 		<div class="col-xs-6 col-md-4" style="text-align: center;">
 			<h1> {{ $temp->templateName }} </h1>
 		</div>
-		<div class="col-xs-6 col-md-4" style="text-align: right;">
+		<div class="col-xs-6 col-md-4">
+		<div class="row">
+		<div class="col-xs-10 col-md-7" style="float: left; text-align: right; padding-right: 0;">
 			<button type="button" class="btn btn-default" onclick="discard()">Discard</button>
+			</div>
+			<div class="col-xs-6 col-md-5" style="float: right; padding-left: 3px;">
 			<?php echo Form::open(['id' => 'tempForm']);
 				  echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'style' => 'margin-right: 3px;']); 
 				  echo Form::submit('Send', ['class' => 'btn btn-success', 'id' => 'send']); 
 				  echo Form::close(); ?>
+				  </div>
+				  </div>
 		</div>
 </div>
 
