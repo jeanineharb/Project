@@ -8,12 +8,12 @@
 			<h1> {{ $temp->templateName }} </h1>
 		</div>
 		<div class="col-xs-6 col-md-4" style="text-align: right;">
-			<?php echo Form::open(['url' => 'action("EditorController@store")', 'id' => 'tempForm']); ?>
+			<?php echo Form::open(['id' => 'tempForm']); ?>
 
  			<button type="button" class="btn btn-default" onclick="discard()">Discard</button>
 
-			<?php echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'formaction' => 'action("EditorController@store")']); 
-				  echo Form::submit('Send', ['class' => 'btn btn-primary', 'id' => 'send', 'formaction' => 'action("EditorController@store")']); 
+			<?php echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'style' => 'margin-right: 3px;']); 
+				  echo Form::submit('Send', ['class' => 'btn btn-success', 'id' => 'send']); 
 				  echo Form::close(); ?>
 			<!-- <button type="button" class="btn btn-primary" id="save">Save</button> -->
 		</div>
@@ -50,7 +50,7 @@ echo $temp->css;
 
 
 $(document).ready(function() {
-	$('#tempForm').submit(function(e){
+	$('#tempForm').on("click", ":submit", function(e){
 		e.preventDefault();
 
 		var $d = "";
@@ -59,6 +59,7 @@ $(document).ready(function() {
 		}
 
 		var $post = {};
+		$post.action = $(this).val();
 		$post.html = $d;
 		$post.css = '<?php echo str_replace("\n", "\\n", $temp->css);?>';
 		$post._token = $('input[name=_token]').val();

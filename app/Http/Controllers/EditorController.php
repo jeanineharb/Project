@@ -51,7 +51,16 @@ class EditorController extends Controller {
 		$data = Input::all();
 		$c = "hola";
 
-		return url('/save/'.$c);
+		// foreach ($data as $name => $value) {
+  //     		echo "$name: $value\n";
+  // 		}
+
+		if($data['action'] == "Save"){
+			return url('/save/'.$c);
+		}
+		else{
+			return url('/template');
+		}
 
 		// print_r($data);
 		// return view('test')->with('data', $data);
