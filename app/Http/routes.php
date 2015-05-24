@@ -28,12 +28,10 @@ Route::get('save/{data}', function($data) {
   return View::make('save')->with('data', $data);
 });
 
+Route::any('upload', 'UploadFileController@upload');
 
-Route::get('upload', function() {
-  return View::make('uploads.upload');
-});
+Route::any('postupload', 'UploadFileController@postupload');
 
-Route::post('apply/upload', 'ApplyController@upload');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
