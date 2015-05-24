@@ -22,6 +22,8 @@ Route::get('/template', 'EditorController@index');
 Route::get('/template/new', 'EditorController@create');
 Route::get('/template/edit/{id}', array('as' => 'edit.temp', 'uses' =>'EditorController@edit'));
 Route::any('/template/save', array('as' => 'save.temp', 'uses' =>'EditorController@store'));
+Route::get('/template/delete/{id}', array('as' => 'delete.temp', 'uses' =>'EditorController@delete'));
+
 
 
 Route::get('save/{data}', function($data) {

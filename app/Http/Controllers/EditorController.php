@@ -12,6 +12,7 @@ use App\UserTemplate;
 use Input;
 use Auth;
 use DB;
+use Redirect;
 
 class EditorController extends Controller {
 
@@ -134,9 +135,10 @@ class EditorController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function delete($id)
 	{
-		//
+		Template::destroy($id);
+		return Redirect::to('/template');
 	}
 
 }
