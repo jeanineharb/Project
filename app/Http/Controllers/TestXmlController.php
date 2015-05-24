@@ -75,21 +75,8 @@ class TestXmlController extends Controller {
 
 		    	// echo "<br><br>";
 			} 
-
-<<<<<<< Updated upstream
 			return view('test')->with('data', $arrayToPassToJeanine);
 	}
-=======
-			echo "string";
->>>>>>> Stashed changes
 
-			foreach($arrayToPassToJeanine as $petit) { 
-
-			echo "string2";
-
-				echo $petit." <br>";
-
-			}
-	}
 }
 

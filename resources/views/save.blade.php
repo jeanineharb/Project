@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- {{ $data }} -->
+{{ $data }}
 
 hi!
 

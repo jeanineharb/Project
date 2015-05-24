@@ -12,7 +12,8 @@
 
  			<button type="button" class="btn btn-default" onclick="discard()">Discard</button>
 
-			<?php echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save']); 
+			<?php echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'formaction' => 'action("EditorController@store")']); 
+				  echo Form::submit('Send', ['class' => 'btn btn-primary', 'id' => 'send', 'formaction' => 'action("EditorController@store")']); 
 				  echo Form::close(); ?>
 			<!-- <button type="button" class="btn btn-primary" id="save">Save</button> -->
 		</div>
@@ -29,13 +30,6 @@ echo $temp->css;
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <script>
-function onSubmit(){
-var data = "";
-for (var i in CKEDITOR.instances){
-data += CKEDITOR.instances[i].getData();
-}
-
-//console.log(data);
 
 // var x = document.getElementsByTagName("field");
 // var i;
@@ -43,38 +37,17 @@ data += CKEDITOR.instances[i].getData();
 // for (i = 0; i < x.length; i++) {
 // att[i]=x.item(i).attributes.getNamedItem("id").value;
 // console.log(att[i]);
-// }
-var redirectUrl = "{{ url('/save') }}";
+
+// var redirectUrl = "{{ url('/save') }}";
 // var form = $('<form action="' + redirectUrl + '" method="post"' +
 // '<input type="hidden" name="data" value="' + data + '"></input>' + 
 // '<input type="hidden" name="_token" value="{{ csrf_token() }}"></input> </form>');
 // $('body').append(form);
 // $(form).submit
 
-	// $_token = "{{ csrf_token() }}";
+// $_token = "{{ csrf_token() }}";
 // $.post( "{{ url('/save') }}", { data: $data,	_token: $_token });
-}
 
-// $(document).ready(function() {
-// 	$('#save').click(function(ev){
-// 		ev.preventDefault();
-
-// 		$d = "";
-// 		for (var i in CKEDITOR.instances){
-// 			$d += CKEDITOR.instances[i].getData();
-// 		}
-
-// 		$.ajax({
-// 			url: "{{ route('save.temp') }}",
-// 			method: 'post',
-// 			data: {data: $d, _token: $('input[name="_token"]').val()},
-// 			success: function(e){
-// 					alert(e);
-// 				},
-// 			error: function(){},
-// 			});
-// 	});
-// });
 
 $(document).ready(function() {
 	$('#tempForm').submit(function(e){
@@ -101,7 +74,6 @@ $(document).ready(function() {
 			success: function(response){
 				window.location.href = response;
 				// console.log(response);
-
 			}
 		});
 	});
@@ -109,13 +81,13 @@ $(document).ready(function() {
 
 
 function discard(){
-	bootbox.confirm("Are you sure you want to discard your changes?", function(result) {
-	if(result) {
-				top.location.href = "{{ url('/template') }}";
-			}
-			else{
+	bootbox.confirm("Are you sure you want to discard your changes?", function(result){
+		if(result){
+			top.location.href = "{{ url('/template') }}";
+		}
+		else{
 			bootbox.hideAll();
-			}
+		}
 	}); 
 }
 </script>

@@ -51,7 +51,7 @@ class EditorController extends Controller {
 		$data = Input::all();
 		$c = "hola";
 
-		return url('/test/'.$c);
+		return url('/save/'.$c);
 
 		// print_r($data);
 		// return view('test')->with('data', $data);

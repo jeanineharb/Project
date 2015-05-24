@@ -23,8 +23,9 @@ Route::get('/template/new', 'EditorController@create');
 Route::get('/template/edit/{id}', array('as' => 'edit.temp', 'uses' =>'EditorController@edit'));
 Route::any('/template/save', array('as' => 'save.temp', 'uses' =>'EditorController@store'));
 
-Route::get('test/{data}', function($data) {
-  return View::make('test')->with('data', $data);
+
+Route::get('save/{data}', function($data) {
+  return View::make('save')->with('data', $data);
 });
 
 
