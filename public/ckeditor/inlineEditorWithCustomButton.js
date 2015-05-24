@@ -70,7 +70,7 @@ CKEDITOR.on( 'instanceCreated', function( event ) {
 	            field.setAttribute('id', dialog.getValueOf('tab-basic', 'var').toLowerCase());
 	            field.setAttribute('style', 'border: 1px solid #f00;');
 	            text = dialog.getValueOf('tab-basic', 'title').toLowerCase();
-	            field.setText('{{ $'+text+' }}');
+	            field.setText('{ $'+text+'}');
 	            editor.insertElement(field);
 	        }
 	    };

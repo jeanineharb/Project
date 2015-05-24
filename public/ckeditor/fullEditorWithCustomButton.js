@@ -48,7 +48,7 @@ CKEDITOR.dialog.add('varDialog', function (editor) {
             field.setAttribute('id', dialog.getValueOf('tab-basic', 'var').toLowerCase());
             field.setAttribute('style', 'border: 1px solid #f00;');
             text = dialog.getValueOf('tab-basic', 'title').toUpperCase();
-            field.setText('{{ $'+text+' }}');
+            field.setText('{ $'+text+'}');
             editor.insertElement(field);
         }
     };
