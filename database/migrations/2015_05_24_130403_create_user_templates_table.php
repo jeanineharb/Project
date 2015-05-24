@@ -14,19 +14,19 @@ class CreateUserTemplatesTable extends Migration {
 	{
 		Schema::create('user_templates', function(Blueprint $table)
 		{
-			// $table->increments('id');
-			$table->integer('user')->unsigned();
-			$table->foreign('user')->references('id')->on('users');
+		// $table->increments('id');
+		$table->integer('user')->unsigned();
+		$table->foreign('user')->references('id')->on('users');
 
-			$table->integer('template')->unsigned();
-			$table->foreign('template')->references('templateId')->on('templates');
+		$table->integer('template')->unsigned();
+		$table->foreign('template')->references('templateId')->on('templates');
 
-			$table->timestamps();
+		$table->timestamps();
 		});
 
 		Schema::table('user_templates', function($table)
 		{
-		    $table->primary(array('user', 'template'));
+		   $table->primary(array('user', 'template'));
 		});
 	}
 

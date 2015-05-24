@@ -25,13 +25,13 @@ class UserSeeder extends Seeder {
 	{
 		//Model::unguard();
 		
-		$this->resetSeed();
+		// $this->resetSeed();
 		
-		$u = new User;
-		$u->name = 'admin';
-		$u->email = 'jneen8@hotmail.com';
-		$u->password = 'admin';
-		$u->save();
+		// $u = new User;
+		// $u->name = 'admin';
+		// $u->email = 'jneen8@hotmail.com';
+		// $u->password = 'admin';
+		// $u->save();
 
 	}
 

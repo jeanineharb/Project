@@ -30,10 +30,9 @@ class TemplateSeeder extends Seeder {
 		
 		$temp = new Template;
 		$temp->category = 1;
-		$temp->user = 1;
 		$temp->templateName = 'Geometric Template';
-		$temp->isFavorite = 'Yes';
-		$temp->isPredefined = 'Yes';
+		$temp->isFavorite = '1';
+		$temp->isPredefined = '1';
 		$temp->html = '
 					<div id="header" contenteditable="true">
 						<div id="headerLeft">
@@ -213,10 +212,9 @@ class TemplateSeeder extends Seeder {
 		
 		$temp = new Template;
 		$temp->category = 2;
-		$temp->user = 1;
 		$temp->templateName = 'Apollo 11 Template';
-		$temp->isFavorite = 'Yes';
-		$temp->isPredefined = 'Yes';
+		$temp->isFavorite = '1';
+		$temp->isPredefined = '1';
 		$temp->html = '
 			<div id="editable" contenteditable="true">
 			<h1 style="text-align: center;" > Apollo 11 </h1>

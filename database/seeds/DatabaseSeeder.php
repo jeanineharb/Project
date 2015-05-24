@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use database\seeds\UserSeeder;
 use database\seeds\EmailCategorySeeder;
 use database\seeds\TemplateSeeder;
+use database\seeds\UserTemplateSeeder;
 
 class DatabaseSeeder extends Seeder {
 
@@ -26,6 +27,9 @@ class DatabaseSeeder extends Seeder {
         
         $this->call('TemplateSeeder');
         $this->command->info('templates table seeded!');
+
+        $this->call('UserTemplateSeeder');
+		$this->command->info('user_templates table seeded!');
         
 	}
 

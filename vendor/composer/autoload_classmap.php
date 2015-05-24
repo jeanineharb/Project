@@ -9,7 +9,7 @@ return array(
     'CreateEmailCategoriesTable' => $baseDir . '/database/migrations/2015_04_27_085501_create_email_categories_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateTemplatesTable' => $baseDir . '/database/migrations/2015_04_27_085658_create_templates_table.php',
-    'CreateUserTemplatesTable' => $baseDir . '/database/migrations/2015_05_24_112745_create_user_templates_table.php',
+    'CreateUserTemplatesTable' => $baseDir . '/database/migrations/2015_05_24_130403_create_user_templates_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'EmailCategorySeeder' => $baseDir . '/database/seeds/EmailCategorySeeder.php',
@@ -432,4 +432,5 @@ return array(
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/Text/Template.php',
     'UserSeeder' => $baseDir . '/database/seeds/UserSeeder.php',
+    'UserTemplateSeeder' => $baseDir . '/database/seeds/UserTemplateSeeder.php',
 );
