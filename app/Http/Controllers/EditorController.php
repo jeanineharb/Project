@@ -82,7 +82,7 @@ class EditorController extends Controller {
 			return url('/template');
 		}
 		else{
-			return url('/upload/'.$userId);
+			return url('/upload/'.$temp->templateId);
 		}
 
 		// print_r($data);

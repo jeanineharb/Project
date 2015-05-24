@@ -36,8 +36,8 @@ echo $temp->css;
 // console.log(att[i]);
 
 $(document).ready(function() {
-	$('#tempForm').click(function(e){
-	// $('#tempForm').on("click", ":submit", function(e){
+	// $('#tempForm').click(function(e){
+	$('#tempForm').on("click", ":submit", function(e){
 		e.preventDefault();
 
 		var $d = "";
