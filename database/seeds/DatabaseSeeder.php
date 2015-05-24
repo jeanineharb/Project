@@ -19,11 +19,11 @@ class DatabaseSeeder extends Seeder {
 	{
 		//Model::unguard();
 
-		// $this->call('UserSeeder');
-		// $this->command->info('users table seeded!');
+		$this->call('UserSeeder');
+		$this->command->info('users table seeded!');
 
-		// $this->call('EmailCategorySeeder');
-		// $this->command->info('email_categories table seeded!');
+		$this->call('EmailCategorySeeder');
+		$this->command->info('email_categories table seeded!');
         
         $this->call('TemplateSeeder');
         $this->command->info('templates table seeded!');
