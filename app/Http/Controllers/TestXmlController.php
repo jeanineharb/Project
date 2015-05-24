@@ -64,7 +64,16 @@ class TestXmlController extends Controller {
 
 			foreach($xml->children() as $client) { 
 
+<<<<<<< Updated upstream
 				// echo "-------------------- Client ------------------------<br>";
+=======
+    echo $books->title . ", "; 
+    echo $books->author . ", "; 
+    echo $books->year . ", ";
+    echo $books->price . "<br>"; 
+    
+} 
+>>>>>>> Stashed changes
 
 		    	foreach($client->children() as $field) { 
 
