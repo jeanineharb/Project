@@ -52,14 +52,13 @@ class EditorController extends Controller {
 		$c = "hola";
 
 		return url('/test/'.$c);
-		// echo "hello";
+
 		// print_r($data);
 		// return view('test')->with('data', $data);
 		// Redirect::route('test', array('data' => $data));
 		// Redirect::to($url, array('data'=>$data));
 		// Redirect::to($url)->withInput();
 		// echo implode(" ",$data);
-		// echo "hi";
 		// return View::make('test')->with('data', $d);
 	}
 

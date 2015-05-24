@@ -87,6 +87,7 @@ $(document).ready(function() {
 
 		var $post = {};
 		$post.html = $d;
+		$post.css = '<?php echo str_replace("\n", "\\n", $temp->css);?>';
 		$post._token = $('input[name=_token]').val();
 
 		var $url = "{{ route('save.temp') }}"
@@ -99,6 +100,8 @@ $(document).ready(function() {
 			method: 'POST',
 			success: function(response){
 				window.location.href = response;
+				// console.log(response);
+
 			}
 		});
 	});
