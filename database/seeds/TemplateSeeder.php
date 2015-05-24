@@ -29,7 +29,7 @@ class TemplateSeeder extends Seeder {
 		$this->resetSeed();
 		
 		$temp = new Template;
-		$temp->category = 3;
+		$temp->category = 2;
 		$temp->templateName = 'Geometric Template';
 		$temp->isFavorite = '1';
 		$temp->isPredefined = '1';
@@ -207,7 +207,7 @@ class TemplateSeeder extends Seeder {
 		
 		
 		$temp = new Template;
-		$temp->category = 4;
+		$temp->category = 3;
 		$temp->templateName = 'Apollo 11 Template';
 		$temp->isFavorite = '1';
 		$temp->isPredefined = '1';

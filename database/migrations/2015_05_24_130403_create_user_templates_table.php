@@ -19,7 +19,7 @@ class CreateUserTemplatesTable extends Migration {
 		$table->foreign('user')->references('id')->on('users');
 
 		$table->integer('template')->unsigned();
-		$table->foreign('template')->references('templateId')->on('templates');
+		$table->foreign('template')->references('templateId')->on('templates')->onDelete('cascade');;
 
 		$table->timestamps();
 		});

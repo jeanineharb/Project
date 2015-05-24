@@ -13,7 +13,7 @@ class UserTemplate extends Model {
 	// define custom primary key
 	protected $primaryKey = 'user, template';
 
-	public function temps(){
+	public function templates(){
 		return $this->hasMany('App\Template', 'templateId', 'template');
 	}
 

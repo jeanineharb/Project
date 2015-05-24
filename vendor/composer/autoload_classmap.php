@@ -432,5 +432,4 @@ return array(
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/Text/Template.php',
     'UserSeeder' => $baseDir . '/database/seeds/UserSeeder.php',
-    'UserTemplateSeeder' => $baseDir . '/database/seeds/UserTemplateSeeder.php',
 );

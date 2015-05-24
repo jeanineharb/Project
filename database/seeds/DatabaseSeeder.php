@@ -28,8 +28,6 @@ class DatabaseSeeder extends Seeder {
         $this->call('TemplateSeeder');
         $this->command->info('templates table seeded!');
 
-        $this->call('UserTemplateSeeder');
-		$this->command->info('user_templates table seeded!');
         
 	}
 
