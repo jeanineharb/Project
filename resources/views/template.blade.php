@@ -15,7 +15,6 @@
 			<?php echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'style' => 'margin-right: 3px;']); 
 				  echo Form::submit('Send', ['class' => 'btn btn-success', 'id' => 'send']); 
 				  echo Form::close(); ?>
-			<!-- <button type="button" class="btn btn-primary" id="save">Save</button> -->
 		</div>
 </div>
 
@@ -37,17 +36,6 @@ echo $temp->css;
 // for (i = 0; i < x.length; i++) {
 // att[i]=x.item(i).attributes.getNamedItem("id").value;
 // console.log(att[i]);
-
-// var redirectUrl = "{{ url('/save') }}";
-// var form = $('<form action="' + redirectUrl + '" method="post"' +
-// '<input type="hidden" name="data" value="' + data + '"></input>' + 
-// '<input type="hidden" name="_token" value="{{ csrf_token() }}"></input> </form>');
-// $('body').append(form);
-// $(form).submit
-
-// $_token = "{{ csrf_token() }}";
-// $.post( "{{ url('/save') }}", { data: $data,	_token: $_token });
-
 
 $(document).ready(function() {
 	$('#tempForm').on("click", ":submit", function(e){
