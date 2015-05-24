@@ -16,7 +16,6 @@
 	  			@endif
 	  		@endforeach
 		</ul>
-
 		<div class="tab-content">
 			@foreach ($cat as $c)
 				@if($c->categoryId == 1)
@@ -32,21 +31,6 @@
 				@if(! $c->predefinedTemplates->isEmpty())
 					<div class="row">
 					@foreach ($c->predefinedTemplates as $t)
-						<div class="col-xs-18 col-sm-6 col-md-3">
-							<div class="thumbnail">
-								<img src="http://placehold.it/500x300" alt="500x300">
-								<div class="caption">
-									<h4> {{ $t->templateName }} </h4>
-									<p>Some sample text. Some sample text.</p>
-									<p> <a href="{{ route('edit.temp', $t->templateId) }}" class="btn btn-info btn-xs" role="button"> Pick! </a> </p>
-								</div>
-							</div>
-						</div>
-					@endforeach
-					</div>
-				@elseif(! $ut->isEmpty())
-					<div class="row">
-					@foreach ($ut->temps as $t)
 						<div class="col-xs-18 col-sm-6 col-md-3">
 							<div class="thumbnail">
 								<img src="http://placehold.it/500x300" alt="500x300">

@@ -33,9 +33,7 @@ class EditorController extends Controller {
 	public function index()
 	{
 		$cat = EmailCategory::all();
-		$userId = Auth::id();
-		$ut = UserTemplate::all()->where('user', $userId);
-		return view('predefinedTemplates')->with(array('cat'=>$cat, 'ut'=> $ut));
+		return view('predefinedTemplates')->with('cat', $cat);
 	}
 
 	/**
