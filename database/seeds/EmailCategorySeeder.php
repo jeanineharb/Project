@@ -26,6 +26,16 @@ class EmailCategorySeeder extends Seeder {
 		//Model::unguard();
 		
 		$this->resetSeed();
+
+		$cat = new EmailCategory;
+		$cat->categoryName = 'My Templates';
+		$cat->categoryDesc = 'Here you can find the templates you have customized!';
+		$cat->save();
+
+		$cat = new EmailCategory;
+		$cat->categoryName = 'Blank Template';
+		$cat->categoryDesc = 'Customizable template from the ground-up.';
+		$cat->save();
 		
 		$cat = new EmailCategory;
 		$cat->categoryName = 'Newsletter';
@@ -50,11 +60,6 @@ class EmailCategorySeeder extends Seeder {
 		$cat = new EmailCategory;
 		$cat->categoryName = 'Personal Message';
 		$cat->categoryDesc = 'Templates suitable for all kinds of messages.';
-		$cat->save();
-		
-		$cat = new EmailCategory;
-		$cat->categoryName = 'Blank Template';
-		$cat->categoryDesc = 'Customizable template from the ground-up.';
 		$cat->save();
 	}
 
