@@ -30,9 +30,8 @@ Route::get('save/{data}', function($data) {
   return View::make('save')->with('data', $data);
 });
 
-Route::any('upload/{id}', array('as' => 'upload', 'uses' =>'UploadFileController@upload'));
-
-Route::any('postupload', 'UploadFileController@postupload');
+Route::any('/upload/{id}', 'UploadFileController@upload');
+Route::post('/postupload/{id}', 'UploadFileController@postupload');
 
 
 Route::controllers([

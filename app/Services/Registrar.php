@@ -48,7 +48,7 @@ class Registrar implements RegistrarContract {
 
 	];
 
-	if(!Mail::send('emails.mail-template', $data2, function($message) use($user){
+	if(!Mail::send('emails.welcomeToXpedit', $data2, function($message) use($user){
 
     $message->to($user['email'] , $user['name']);
 
