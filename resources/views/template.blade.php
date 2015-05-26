@@ -9,13 +9,12 @@
 		</div>
 		<div class="col-xs-6 col-md-4">
 		<div class="row">
-		<div class="col-xs-10 col-md-7" style="float: left; text-align: right; padding-right: 0;">
+		<div class="col-xs-4 col-md-3" style="float: right; text-align: left; padding-left: 0;">
 			<button type="button" class="btn btn-default" onclick="discard()">Discard</button>
 			</div>
-			<div class="col-xs-6 col-md-5" style="float: right; padding-left: 3px;">
+			<div class="col-xs-4 col-md-3" style="float: right; text-align: right; padding-right: 0;">
 			<?php echo Form::open(['id' => 'tempForm']);
 				  echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'style' => 'margin-right: 3px;']); 
-				  echo Form::submit('Send', ['class' => 'btn btn-success', 'id' => 'send']); 
 				  echo Form::close(); ?>
 				  </div>
 				  </div>
@@ -62,7 +61,6 @@ $(document).ready(function() {
 		}
 
 		var $post = {};
-		$post.action = $(this).val();
 		$post.cat = '<?php echo $temp->category; ?>';
 		$post.html = $d;
 		$post.css = '<?php echo str_replace("\n", "\\n", $temp->css);?>';

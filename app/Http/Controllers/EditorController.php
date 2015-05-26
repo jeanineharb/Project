@@ -75,24 +75,9 @@ class EditorController extends Controller {
 		$ut->template = $temp->templateId;
 		$ut->save();
 
-		// foreach ($data as $name => $value) {
-  //     		echo "$name: $value\n";
-  // 		}
+		return url('/template');
 
-		if($data['action'] == "Save"){
-			return url('/template');
-		}
-		else{
-			return url('/upload/'.$temp->templateId);
-		}
-
-		// print_r($data);
-		// return view('test')->with('data', $data);
-		// Redirect::route('test', array('data' => $data));
-		// Redirect::to($url, array('data'=>$data));
-		// Redirect::to($url)->withInput();
-		// echo implode(" ",$data);
-		// return View::make('test')->with('data', $d);
+		// 	return url('/upload', ['id' => $temp->templateId]);
 	}
 
 	/**
