@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Template;
 use App\EmailCategory;
+use Auth;
 
 use Input;
 use Mail;
@@ -20,7 +21,7 @@ class UploadFileController extends Controller {
 	{
 
 
-		return view('uploads.upload')->with('id', $id);
+			return view('uploads.upload')->with('id', $id)->with('error','');
 	}
 	
 	public function postupload($id) {
@@ -40,33 +41,65 @@ class UploadFileController extends Controller {
 
 		if(!in_array($ext,$allowed) ) {
 			$data['error'] = "wrong file extension";
-			return view('test')->with('data', $data);
+
+			return view('uploads.upload')->with('id', $id)->with('error',"Please choose a valid file format.");
+
 		}
 
-		$xml=simplexml_load_file($filename) or die("Error: Cannot create object");
+		if ($_FILES['userfile']['size'] == 0) {
+
+			return view('uploads.upload')->with('id', $id)->with('error',"File is emptpy");
+
+	    }
+
+		if(!$xml=simplexml_load_file($filename, 'SimpleXMLElement',LIBXML_NOERROR)){
+
+			return view('uploads.upload')->with('id', $id)->with('error',"File is not well formed");
+
+		}
 		
-		foreach($xml->children() as $client) { 
+		$clientsData = array();
+		
+		$i = 0;
+
+		foreach($xml->children() as $client) {
+
+
 			foreach($client->children() as $field) { 
-				$this->recursiveCheckForChildren($field , $XMLdata);
+				$this->recursiveCheckForChildren($field , $clientsData[$i]);
 			}
+
+			$i++;
+
 		}
 
 			  $temp = Template::where('templateId', '=', $id)->get()->first();
 			  $stringtemp = $temp->html.$temp->css;
+			  file_put_contents("../resources/views/usertemplatesblades/".$id.".blade.php", $stringtemp);
 
-			file_put_contents("../resources/views/usertemplatesblades/".$id.".blade.php", $stringtemp);
+		$user = Auth::user();
+		echo $user;
 
-		//$data['xml'] = $XMLdata;
+	    foreach ($clientsData as $client) {
 
-		// handle data here//
+		if(Mail::Send('usertemplatesblades.'.$id , $client, function($message) use ($client , $user){
+	    
+	     $recipient = $client['mail'];
+		 $recipient = str_replace(' ', '', $recipient);
 
-				Mail::send('usertemplatesblades.'.$id,$XMLdata, function($message) {
-
-   		 $message->to('mansour.hachem@hotmail.com', 'Jon Doe');
+   		 $message->to($recipient, $client['name']);
    		 $message->subject('Welcome to the Laravel 4 Auth App!');
-   		 $message->from('info@emailtemplateproject.com', 'lm lm');
+   		 $message->from('info@emailtemplateproject.com', $user['name']);
 
-		});
+		})){
+			echo "Mail to ".$client['mail']." sent";
+		}
+		else {
+
+			echo "Mail to ".$client['mail']." failed";
+		}
+
+	    }
 
 		//return view('usertemplatesblades.'.$id,$XMLdata);//->with('data', $XMLdata);
 	}
