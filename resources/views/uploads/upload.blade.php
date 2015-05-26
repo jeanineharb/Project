@@ -2,7 +2,13 @@
 
 @section('content')
 
-<?php echo "<?php echo 'asdasd222asdasd';?>"; ?>
+<?php 
+
+if ($error) {
+	echo "<font color='red'>".$error."</font>";
+}
+
+?>
 
 <!-- The data encoding type, enctype, MUST be specified as below -->
      <form enctype="multipart/form-data" action="/postupload/{{$id}}" method="POST">

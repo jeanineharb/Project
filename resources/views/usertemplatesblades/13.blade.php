@@ -1,24 +1,24 @@
 <div id="header">
 <div id="headerLeft">
-<h2 style="text-align:center"><span style="font-family:Lato"><span style="color:#A9A9A9">Xpedit</span></span></h2>
-
-<p><span style="color:#000000">Hi {{$name}},</span></p>
-
-<p><span style="color:#000000">Welcome to Xpedit and thanks for signing up ! We are absolutely thrilled that you have decided to give Xpedit a try and just want you to know that if you want to contact the team feel free to do so anytime at :</span></p>
-
-<p><span style="color:#0000FF"><u>info@emailtemplateproject.com</u></span></p>
+<h2><u>ACCOUNT BALANCE</u></h2>
 
 <p>&nbsp;</p>
 
-<p><strong><span style="color:#000000">Have a great day and happy Xpediting !</span></strong></p>
+<p>Date :&nbsp;<field id="date" style="border: 1px solid #f00;">{{$date}}</field></p>
 
-<p><span style="color:#000000">The Xpedit team</span></p>
-
-<p><span style="color:#0000FF"><u>www.emailtemplateproject.com</u></span></p>
+<p>Dear&nbsp;<field id="name" style="border: 1px solid #f00;">{{$name}}</field>, this is your current balance :&nbsp;<field id="balance" style="border: 1px solid #f00;">{{$balance}}</field>.</p>
 
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
+
+<p>Thank you.</p>
+
+<p>&nbsp;</p>
+
+<p>Bank Audi.</p>
+
+<h3>&nbsp;</h3>
 </div>
 </div>
 
