@@ -10,12 +10,9 @@
 			"path": "resources/views"
 		},
 		{
-			"folder_include_patterns":
-			[
-				"*.php"
-			],
-			"name": "Controllers",
-			"path": "app/Http/Controllers"
+
+			"name": "HTTP",
+			"path": "./app/Http"
 		},
 		{
 		

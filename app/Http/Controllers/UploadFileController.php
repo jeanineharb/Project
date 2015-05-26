@@ -8,6 +8,7 @@ use App\Template;
 use App\EmailCategory;
 
 use Input;
+use Mail;
 
 class UploadFileController extends Controller {
 /**
@@ -15,12 +16,16 @@ class UploadFileController extends Controller {
 *
 * @return Response
 */
-	public function upload()
+	public function upload($id)
 	{
-		return view('uploads.upload');
+
+
+		return view('uploads.upload')->with('id', $id);
 	}
 	
-	public function postupload() {
+	public function postupload($id) {
+
+
 		$data = array();
 		$XMLdata = array();
 
@@ -46,17 +51,33 @@ class UploadFileController extends Controller {
 			}
 		}
 
-		$data['xml'] = $XMLdata;
+			  $temp = Template::where('templateId', '=', $id)->get()->first();
+			  $stringtemp = $temp->html.$temp->css;
+
+			file_put_contents("../resources/views/usertemplatesblades/".$id.".blade.php", $stringtemp);
+
+		//$data['xml'] = $XMLdata;
 
 		// handle data here//
-		return view('test')->with('data', $data);
+
+				Mail::send('usertemplatesblades.'.$id,$XMLdata, function($message) {
+
+   		 $message->to('mansour.hachem@hotmail.com', 'Jon Doe');
+   		 $message->subject('Welcome to the Laravel 4 Auth App!');
+   		 $message->from('info@emailtemplateproject.com', 'lm lm');
+
+		});
+
+		//return view('usertemplatesblades.'.$id,$XMLdata);//->with('data', $XMLdata);
 	}
 
 	public function recursiveCheckForChildren($array , &$array2){
 		if ($array->count() == 0) {
 			// echo $array->getName() . " : " . $array . "<br>";
-			$arrayToAdd = array($array->getName() , $array);
-			array_push($array2, $arrayToAdd);
+			//$arrayToAdd = array($array->getName() , $array);
+
+			$array2[$array->getName()]=$array;
+			//array_push($array2, $arrayToAdd);
 		}
 		else{
 			foreach ($array as $element) {
