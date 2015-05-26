@@ -57,7 +57,7 @@
 								<img src="http://placehold.it/500x300" alt="500x300">
 								<div class="caption">
 									<h4> {{ $t->templateName }} </h4>
-									<p> <a href="#" class="btn btn-success btn-xs" role="button"> Send! </a> 
+									<p> <a href="{{ route('upload', $t->templateId) }}" class="btn btn-success btn-xs" role="button"> Send! </a> 
 										<a href="{{ route('edit.temp', $t->templateId) }}" class="btn btn-info btn-xs" role="button"> Edit </a> 
 										<a href="{{ route('delete.temp', $t->templateId) }}" class="btn btn-danger btn-xs" role="button"> Delete </a> </p>
 								</div>

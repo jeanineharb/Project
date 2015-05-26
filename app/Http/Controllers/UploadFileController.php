@@ -20,8 +20,7 @@ class UploadFileController extends Controller {
 	public function upload($id)
 	{
 
-
-			return view('uploads.upload')->with('id', $id)->with('error','');
+		return view('uploads.upload')->with('id', $id)->with('error','');
 	}
 	
 	public function postupload($id) {

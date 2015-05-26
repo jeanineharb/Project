@@ -121,9 +121,9 @@ class EditorController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function send($id)
 	{
-		//
+		return Redirect::to('/upload', array('id', $id));
 	}
 
 	/**
