@@ -42,7 +42,7 @@
 								<img src="http://placehold.it/500x300" alt="500x300">
 								<div class="caption">
 									<h4> {{ $t->templateName }} </h4>
-									<p> <a href="{{ route('edit.temp', $t->templateId) }}" class="btn btn-info btn-xs" role="button"> Pick! </a> </p>
+									<p> <a href="{{ route('pick.temp', $t->templateId) }}" class="btn btn-info btn-xs" role="button"> Pick! </a> </p>
 								</div>
 							</div>
 						</div>

@@ -56,24 +56,35 @@ class EditorController extends Controller {
 	 */
 	public function store()
 	{
-		//Get html string from modified template.
 		$data = Input::all();
 		$userId = Auth::id();
-		$nb = DB::table('user_templates')->where('user', $userId)->count() + 1;
+		
+		$action = $data['action'];
 
-		$temp = new Template;
-		$temp->category = $data['cat'];
-		$temp->templateName = 'Custom Template #'.$nb;
-		$temp->isFavorite = '0';
-		$temp->isPredefined = '0';
-		$temp->html = $data['html'];
-		$temp->css = $data['css'];
-		$temp->save();
+		if($action == "save"){
+			//Save template as a new record.
+			$nb = UserTemplate::all()->where('user', $userId)->count() + 1;
 
-		$ut = new UserTemplate;
-		$ut->user = $userId;
-		$ut->template = $temp->templateId;
-		$ut->save();
+			$temp = new Template;
+			$temp->category = $data['cat'];
+			$temp->templateName = 'Custom Template #'.$nb;
+			$temp->isFavorite = '0';
+			$temp->isPredefined = '0';
+			$temp->html = $data['html'];
+			$temp->css = $data['css'];
+			$temp->save();
+
+			$ut = new UserTemplate;
+			$ut->user = $userId;
+			$ut->template = $temp->templateId;
+			$ut->save();
+		}
+		else{
+			//Edit existing template.
+			$temp = Template::find($data['id']);
+			$temp->html = $data['html'];
+			$temp->save();
+		}
 
 		return url('/template');
 
@@ -88,7 +99,8 @@ class EditorController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$temp = Template::find($id);
+		return view('template')->with(array('temp' => $temp, 'action' => 'save'));
 	}
 
 	/**
@@ -99,8 +111,8 @@ class EditorController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$temp = Template::where('templateId', '=', $id)->get()->first();
-		return view('template')->with('temp', $temp);
+		$temp = Template::find($id);
+		return view('template')->with(array('temp' => $temp, 'action' => 'edit'));
 	}
 
 	/**

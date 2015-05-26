@@ -14,7 +14,7 @@
 			</div>
 			<div class="col-xs-4 col-md-3" style="float: right; text-align: right; padding-right: 0;">
 			<?php echo Form::open(['id' => 'tempForm']);
-				  echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => 'save', 'style' => 'margin-right: 3px;']); 
+				  echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => $action, 'style' => 'margin-right: 3px;']); 
 				  echo Form::close(); ?>
 				  </div>
 				  </div>
@@ -61,6 +61,8 @@ $(document).ready(function() {
 		}
 
 		var $post = {};
+		$post.action = '<?php echo $action; ?>';
+		$post.id = '<?php echo $temp->templateId; ?>';
 		$post.cat = '<?php echo $temp->category; ?>';
 		$post.html = $d;
 		$post.css = '<?php echo str_replace("\n", "\\n", $temp->css);?>';
