@@ -3,6 +3,7 @@
  */
 
 editor = CKEDITOR.replace( 'editor1', {
+    toolbar : 'FullToolbar',
     fullPage: true,
     allowedContent: true,
     extraPlugins: 'wysiwygarea'
@@ -25,19 +26,13 @@ CKEDITOR.dialog.add('varDialog', function (editor) {
         contents: [
             {
                 id: 'tab-basic',
-                label: 'Basic Settings',
+                label: 'Basic Tab',
                 elements: [
                     {
                         type: 'text',
-                        id: 'var',
-                        label: 'Id',
-                        validate: CKEDITOR.dialog.validate.notEmpty("Id field cannot be empty")
-                },
-                    {
-                        type: 'text',
-                        id: 'title',
-                        label: 'Value',
-                        validate: CKEDITOR.dialog.validate.notEmpty("Value field cannot be empty")
+                        id: 'name',
+                        label: 'Tag Name',
+                        validate: CKEDITOR.dialog.validate.notEmpty("Tag Name cannot be empty")
                     }
                 ]
             }
@@ -45,9 +40,8 @@ CKEDITOR.dialog.add('varDialog', function (editor) {
         onOk: function(){
             var dialog = this;
             var field = editor.document.createElement('field');
-            field.setAttribute('id', dialog.getValueOf('tab-basic', 'var').toLowerCase());
-            field.setAttribute('style', 'border: 1px solid #f00;');
-            text = dialog.getValueOf('tab-basic', 'title').toUpperCase();
+            field.setAttribute('name', dialog.getValueOf('tab-basic', 'name'));
+            text = dialog.getValueOf('tab-basic', 'name');
             field.setText('{{$'+text+'}}');
             editor.insertElement(field);
         }
