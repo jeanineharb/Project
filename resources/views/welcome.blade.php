@@ -15,7 +15,7 @@
 				padding: 0;
 				width: 100%;
 				height: 100%;
-				color: #B0BEC5;
+				color: #909090;
 				display: table;
 				font-weight: 100;
 				font-family: 'Lato';
@@ -34,12 +34,20 @@
 
 			.title {
 				font-size: 96px;
-				margin-bottom: 40px;
+				margin-bottom: 1px;
 			}
 
 			.quote {
 				font-size: 24px;
 			}
+
+			.version{
+				position: absolute;
+    			bottom: 0px;
+    			left: 40%;
+    			right: 40%;
+    			text-align: center;
+    		}
 		</style>
 	</head>
 	<body>
@@ -49,7 +57,7 @@
 				<div class="title">Xpedit</div>
 				<!-- <div class="quote">{{ Inspiring::quote() }}</div> -->
 				<p> <a class="btn btn-default btn-block" href="{{ url('/about') }}" style="font-size: 18px;"> Learn more </a> </p>
-			</div>
+				<div class="version">version   0.0.1</div>
 		</div>
 	</body>
 </html>
