@@ -4,21 +4,21 @@
 
 <div class="row">
 	<div class="col-xs-6 col-md-4"></div>
-		<div class="col-xs-6 col-md-4" style="text-align: center;">
-			<h1> {{ $temp->templateName }} </h1>
-		</div>
-		<div class="col-xs-6 col-md-4">
+	<div class="col-xs-6 col-md-4" style="text-align: center;">
+		<h1> {{ $temp->templateName }} </h1>
+	</div>
+	<div class="col-xs-6 col-md-4">
 		<div class="row">
-		<div class="col-xs-4 col-md-3" style="float: right; text-align: left; padding-left: 0;">
-			<button type="button" class="btn btn-default" onclick="discard()">Discard</button>
+			<div class="col-xs-4 col-md-3" style="float: right; text-align: left; padding-left: 0;">
+				<button type="button" class="btn btn-default" onclick="discard()">Discard</button>
 			</div>
 			<div class="col-xs-4 col-md-3" style="float: right; text-align: right; padding-right: 0;">
-			<?php echo Form::open(['id' => 'tempForm']);
-				  echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => $action, 'style' => 'margin-right: 3px;']); 
-				  echo Form::close(); ?>
-				  </div>
-				  </div>
+				<?php echo Form::open(['id' => 'tempForm']);
+					  echo Form::submit('Save', ['class' => 'btn btn-primary', 'id' => $action, 'style' => 'margin-right: 3px;']); 
+					  echo Form::close(); ?>
+			</div>
 		</div>
+	</div>
 </div>
 
 <div contenteditable="true">
@@ -38,6 +38,7 @@ echo $temp->css;
 
 <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
 <script src="{{ asset('/ckeditor/inlineEditorWithCustomButton.js') }}"></script>
+
 <script src="{{ asset('/bootbox.min.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
@@ -68,7 +69,7 @@ $(document).ready(function() {
 		$post.css = '<?php echo str_replace("\n", "\\n", $temp->css);?>';
 		$post._token = $('input[name=_token]').val();
 
-		var $url = "{{ route('save.temp') }}"
+		var $url = "{{ route('save.temp') }}";
 
 		console.log($post);
 
@@ -88,7 +89,7 @@ $(document).ready(function() {
 function discard(){
 	bootbox.confirm("Are you sure you want to discard your changes?", function(result){
 		if(result){
-			top.location.href = "{{ url('/template') }}";
+			top.location.href = "{{ url('/templates') }}";
 		}
 		else{
 			bootbox.hideAll();
