@@ -46,7 +46,7 @@ class EditorController extends Controller {
 	 */
 	public function create()
 	{
-		return view('editor');
+		return view('editor')->with('action', 'save');
 	}
 
 	/**
@@ -86,7 +86,7 @@ class EditorController extends Controller {
 			$temp->save();
 		}
 
-		return url('/template');
+		return url('/templates');
 
 		// 	return url('/upload', ['id' => $temp->templateId]);
 	}
@@ -113,6 +113,20 @@ class EditorController extends Controller {
 	{
 		$temp = Template::find($id);
 		return view('template')->with(array('temp' => $temp, 'action' => 'edit'));
+	}
+
+
+	public function rename()
+	{
+		$data = Input::all();
+		$id = $data['id'];
+		$newName = $data['value'];
+
+		$temp = Template::find($id);
+		$temp->templateName = $newName;
+		$temp->save();
+
+		return url('/templates');
 	}
 
 	/**
