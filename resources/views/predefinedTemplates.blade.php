@@ -2,6 +2,8 @@
 
 @section('content')
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
 	<div class="row">
 		<div class="col-sm-3 col-md-6">
 		<h2> Templates <small> Pick the template that fits your needs!</small></h2>
@@ -16,9 +18,9 @@
 		<ul class="nav nav-tabs">
 			@foreach ($cat as $c)
 				@if($c->categoryId == 1)
-					<li class="active"><a href="#{{ $c->categoryId }}" data-toggle="tab">{{ $c->categoryName }}</a></li>
+					<li class="active"><a href="#tab{{ $c->categoryId }}" data-toggle="tab">{{ $c->categoryName }}</a></li>
 				@else
-	  				<li><a href="#{{ $c->categoryId }}" data-toggle="tab">{{ $c->categoryName }}</a></li>
+	  				<li><a href="#tab{{ $c->categoryId }}" data-toggle="tab">{{ $c->categoryName }}</a></li>
 	  			@endif
 	  		@endforeach
 		</ul>
@@ -26,9 +28,9 @@
 		<div class="tab-content">
 			@foreach ($cat as $c)
 				@if($c->categoryId == 1)
-					<div class="tab-pane active" id="{{ $c->categoryId }}">
+					<div class="tab-pane active" id="tab{{ $c->categoryId }}">
 				@else
-	  				<div class="tab-pane" id="{{ $c->categoryId }}">
+	  				<div class="tab-pane" id="tab{{ $c->categoryId }}">
 	  			@endif
 
 	  			<div class="well" style="margin-top: 10px;">
@@ -81,7 +83,6 @@
 		</div>
 	</div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="http://www.appelsiini.net/download/jquery.jeditable.mini.js"></script>
 
 <script type="text/javascript">
