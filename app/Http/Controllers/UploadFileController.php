@@ -70,11 +70,11 @@ class UploadFileController extends Controller {
 		}
 
 		if ($_FILES['userfile']['size'] == 0) {
-			return view('uploads.upload')->with('id', $id)->with('error',"File is emptpy");
+			return view('uploads.upload')->with('id', $id)->with('error',"File is empty.");
 		}
 
 		if(!$xml=simplexml_load_file($filename, 'SimpleXMLElement',LIBXML_NOERROR)){
-			return view('uploads.upload')->with('id', $id)->with('error',"File is not well formed");
+			return view('uploads.upload')->with('id', $id)->with('error',"File is not well-formed.");
 		}
 		
 		$clientsData = array();
