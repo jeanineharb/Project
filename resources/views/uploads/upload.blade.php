@@ -23,16 +23,19 @@ if ($error) {
 
 		<h4> Select an XML file from your computer: </h4>
 
-		<?php echo Form::file('userfile', ['id' => 'uploadFiles']);
-			  echo Form::submit('Upload', ['class' => 'btn btn-primary', 'style' => 'margin-right: 3px;']); ?>
+		<div class="form-inline">
+			<div class="form-group">
+				<?php echo Form::file('userfile', ['id' => 'uploadFiles']); ?>
+			</div>
+				<?php echo Form::submit('Upload file', ['class' => 'btn btn-sm btn-primary', 'style' => 'margin-right: 3px;']);
+					  echo Form::close(); ?>
+		</div>
 
 		 <!-- Drop Zone -->
 		<h4>Or drag and drop files below: </h4>
 		<div class="upload-drop-zone" id="drop-zone">
 			Just drag and drop files here
 		</div>
-
-		<?php echo Form::close(); ?>
 	</div>
 </div>
 
