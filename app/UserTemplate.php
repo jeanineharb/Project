@@ -2,8 +2,6 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-use Auth;
-
 class UserTemplate extends Model {
 
 	protected $table = 'user_templates';
@@ -15,8 +13,8 @@ class UserTemplate extends Model {
 	// define custom primary key
 	protected $primaryKey = 'user, template';
 
-	public function temps(){
-		return $this->belongsTo('App\Template', 'template', 'templateId');
+	public function templates(){
+		return $this->hasMany('App\Template', 'templateId', 'template');
 	}
 
 }

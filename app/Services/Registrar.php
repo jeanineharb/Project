@@ -32,14 +32,6 @@ class Registrar implements RegistrarContract {
 	public function create(array $data)
 	{	
 
-	$content = "Hi ".$data['name'].", welcome to the most advanced mail dispatcher in human history.";
-
-	$data2 = [
-
-    'content' => $content,
-
-
-	];
 
 	$user = [
 
@@ -48,7 +40,7 @@ class Registrar implements RegistrarContract {
 
 	];
 
-	if(!Mail::send('emails.mail-template', $data2, function($message) use($user){
+	if(!Mail::send('emails.welcomeToXpedit', $user, function($message) use($user){
 
     $message->to($user['email'] , $user['name']);
 

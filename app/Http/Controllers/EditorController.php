@@ -12,6 +12,7 @@ use App\UserTemplate;
 use Input;
 use Auth;
 use DB;
+use Redirect;
 
 class EditorController extends Controller {
 
@@ -45,7 +46,7 @@ class EditorController extends Controller {
 	 */
 	public function create()
 	{
-		return view('editor');
+		return view('editor')->with('action', 'save');
 	}
 
 	/**
@@ -55,45 +56,39 @@ class EditorController extends Controller {
 	 */
 	public function store()
 	{
-		//Get html string from modified template.
 		$data = Input::all();
-		$c = "Saved";
-
 		$userId = Auth::id();
-		$nb = DB::table('user_templates')->where('user', $userId)->count() + 1;
+		
+		$action = $data['action'];
 
-		$temp = new Template;
-		$temp->category = $data['cat'];
-		$temp->templateName = 'Custom Template #'.$nb;
-		$temp->isFavorite = '0';
-		$temp->isPredefined = '0';
-		$temp->html = $data['html'];
-		$temp->css = $data['css'];
-		$temp->save();
+		if($action == "save"){
+			//Save template as a new record.
+			$nb = UserTemplate::all()->where('user', $userId)->count() + 1;
 
-		$ut = new UserTemplate;
-		$ut->user = $userId;
-		$ut->template = $temp->templateId;
-		$ut->save();
+			$temp = new Template;
+			$temp->category = $data['cat'];
+			$temp->templateName = 'Custom Template #'.$nb;
+			$temp->isFavorite = '0';
+			$temp->isPredefined = '0';
+			$temp->html = $data['html'];
+			$temp->css = $data['css'];
+			$temp->save();
 
-		// foreach ($data as $name => $value) {
-  //     		echo "$name: $value\n";
-  // 		}
-
-		if($data['action'] == "Save"){
-			return url('/save/'.$c);
+			$ut = new UserTemplate;
+			$ut->user = $userId;
+			$ut->template = $temp->templateId;
+			$ut->save();
 		}
 		else{
-			return url('/template');
+			//Edit existing template.
+			$temp = Template::find($data['id']);
+			$temp->html = $data['html'];
+			$temp->save();
 		}
 
-		// print_r($data);
-		// return view('test')->with('data', $data);
-		// Redirect::route('test', array('data' => $data));
-		// Redirect::to($url, array('data'=>$data));
-		// Redirect::to($url)->withInput();
-		// echo implode(" ",$data);
-		// return View::make('test')->with('data', $d);
+		return url('/templates');
+
+		// 	return url('/upload', ['id' => $temp->templateId]);
 	}
 
 	/**
@@ -104,7 +99,8 @@ class EditorController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$temp = Template::find($id);
+		return view('template')->with(array('temp' => $temp, 'action' => 'save'));
 	}
 
 	/**
@@ -115,8 +111,22 @@ class EditorController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$temp = Template::where('templateId', '=', $id)->get()->first();
-		return view('template')->with('temp', $temp);
+		$temp = Template::find($id);
+		return view('template')->with(array('temp' => $temp, 'action' => 'edit'));
+	}
+
+
+	public function rename()
+	{
+		$data = Input::all();
+		$id = $data['id'];
+		$newName = $data['value'];
+
+		$temp = Template::find($id);
+		$temp->templateName = $newName;
+		$temp->save();
+
+		return url('/templates');
 	}
 
 	/**
@@ -125,9 +135,9 @@ class EditorController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function send($id)
 	{
-		//
+		return Redirect::to('/upload', array('id', $id));
 	}
 
 	/**
@@ -136,9 +146,10 @@ class EditorController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function delete($id)
 	{
-		//
+		Template::destroy($id);
+		return Redirect::to('/templates');
 	}
 
 }

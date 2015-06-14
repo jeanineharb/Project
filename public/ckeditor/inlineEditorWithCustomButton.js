@@ -2,6 +2,8 @@
  * 
  */
 
+
+
 CKEDITOR.on( 'instanceCreated', function( event ) {
 	var editor = event.editor,
 		element = editor.element;
@@ -29,51 +31,64 @@ CKEDITOR.on( 'instanceCreated', function( event ) {
 //			];
 //		});
 //	}
+	editor.on( 'configLoaded', function() {
+		editor.addCommand('varDialog', new CKEDITOR.dialogCommand('varDialog'));
 
-	editor.addCommand('varDialog', new CKEDITOR.dialogCommand('varDialog'));
+		editor.ui.addButton('Var', {
+		    label: 'Insert Variable Text',
+		    command: 'varDialog',
+		    toolbar: 'insert',
+		    icon: 'skins/icy_orange/images/add.png'
+		});
 
-	editor.ui.addButton('Var', {
-	    label: 'Insert Variable Text',
-	    command: 'varDialog',
-	    toolbar: 'insert',
-	    icon: 'skins/icy_orange/images/add.png'
-	});
+		editor.config.toolbar =
+		[
+			{ name: 'document', items : [ 'NewPage','Preview' ] },
+			{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+			{ name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','Scayt' ] },
+			{ name: 'forms', items : [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 
+		        'HiddenField' ] },
+		    '/',
+			{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+			{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv',
+			'-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
+			{ name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+			{ name: 'insert', items : [ 'Image','Flash','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe','Table', 'Var' ] },
+			'/',
+			{ name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
+			{ name: 'colors', items : [ 'TextColor','BGColor' ] },
+			{ name: 'tools', items : [ 'Maximize', 'ShowBlocks','-','About' ] }
+		];
 
-	CKEDITOR.dialog.add('varDialog', function (editor) {
-	    return {
-	        title: 'Variable Text Properties',
-	        minWidth: 400,
-	        minHeight: 200,
-	        contents: [
-	            {
-	                id: 'tab-basic',
-	                label: 'Basic Settings',
-	                elements: [
-	                    {
-	                        type: 'text',
-	                        id: 'var',
-	                        label: 'Id',
-	                        validate: CKEDITOR.dialog.validate.notEmpty("Id field cannot be empty")
-	                },
-	                    {
-	                        type: 'text',
-	                        id: 'title',
-	                        label: 'Value',
-	                        validate: CKEDITOR.dialog.validate.notEmpty("Value field cannot be empty")
-	                    }
-	                ]
-	            }
-	        ],
-	        onOk: function(){
-	            var dialog = this;
-	            var field = editor.document.createElement('field');
-	            field.setAttribute('id', dialog.getValueOf('tab-basic', 'var').toLowerCase());
-	            field.setAttribute('style', 'border: 1px solid #f00;');
-	            text = dialog.getValueOf('tab-basic', 'title').toLowerCase();
-	            field.setText('{{ $'+text+' }}');
-	            editor.insertElement(field);
-	        }
-	    };
+		CKEDITOR.dialog.add('varDialog', function (editor) {
+		    return {
+		        title: 'Variable Text Properties',
+		        minWidth: 400,
+		        minHeight: 200,
+		        contents: [
+		            {
+		                id: 'tab-basic',
+		                label: 'Basic Tab',
+		                elements: [
+		                    {
+		                        type: 'text',
+		                        id: 'name',
+		                        label: 'Tag Name',
+		                        validate: CKEDITOR.dialog.validate.notEmpty("Tag Name cannot be empty")
+		                	}
+		               	]
+		            }
+		        ],
+		        onOk: function(){
+		            var dialog = this;
+		            var field = editor.document.createElement('field');
+		            field.setAttribute('name', dialog.getValueOf('tab-basic', 'name'));
+		            text = dialog.getValueOf('tab-basic', 'name');
+		            field.setText('{{$'+text+'}}');
+		            editor.insertElement(field);
+		        }
+		    };
+		});
 	});
 
 });

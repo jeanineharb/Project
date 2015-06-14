@@ -40,13 +40,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/home') }}">Home</a></li>
 					@if (!Auth::guest())
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Templates <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/template/new') }}"> New Template </a> </li>
-								<li><a href="{{ url('/template') }}"> Predefined Templates </a> </li>
-							</ul>
-						</li>
+						<li><a href="{{ url('/templates') }}"> Templates </a> </li>
 					@endif
 					<li><a href="{{ url('/about') }}">About</a></li>
 				</ul>
