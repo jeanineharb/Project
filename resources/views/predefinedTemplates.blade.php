@@ -2,7 +2,13 @@
 
 @section('content')
 
+<script src="{{ asset('/js/bootbox.min.js') }}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.appelsiini.net/download/jquery.jeditable.mini.js"></script>
+
+
+
 
 	<div class="row">
 		<div class="col-sm-3 col-md-6">
@@ -64,7 +70,7 @@
 										 Last modified: {{ date('F d, Y', strtotime($t->updated_at)) }} </h6>
 									<p> <a href="{{ route('upload', $t->templateId) }}" class="btn btn-success btn-xs" role="button"> Send! </a> 
 										<a href="{{ route('edit.temp', $t->templateId) }}" class="btn btn-info btn-xs" role="button"> Edit </a> 
-										<a href="{{ route('delete.temp', $t->templateId) }}" class="btn btn-danger btn-xs" role="button"> Delete </a> </p>
+										<a class="btn btn-danger btn-xs" role="button" onclick="deleteTemp(this.id)" id="{{ $t->templateId }}"> Delete </a> </p>
 								</div>
 							</div>
 						</div>
@@ -83,33 +89,46 @@
 		</div>
 	</div>
 
-<script src="http://www.appelsiini.net/download/jquery.jeditable.mini.js"></script>
 
 <script type="text/javascript">
 
-$('.tempName').editable(function(value, settings) {
+$('.tempName').editable(function(value) {
 	var $url = "{{ route('rename.temp') }}";
+
 	var $post = {};
 	$post.id = $(this).attr('id');
 	$post.value = value;
-	// console.log(value);
 
 	$.ajax({
-			url: $url,
-			data: $post,
-			method: 'POST',
-			success: function(response){
-				window.location.href = response;
-			}
+		url: $url,
+		data: $post,
+		method: 'POST',
+		success: function(response){
+			// console.log(response);
+			window.location.href = response;
+		}
 	});
-	return(value);
 }, {
-	indicator : '{{ asset("/images/loading.gif") }}',
-	tooltip   : 'Click to edit',
-	select    : true,
-	type    : 'textarea',
-	submit  : 'OK',
+	indicator: '{{ asset("/images/loading.gif") }}',
+	tooltip  : 'Click to edit',
+	select   : true,
+	type     : 'textarea',
+	submit   : 'OK',
 });
+
+
+function deleteTemp(id){
+	bootbox.confirm("Are you sure you want to delete this template?", function(result){
+		if(result){
+			top.location.href = "{{ url('/template/delete')}}/"+id;
+			// bootbox.hideAll();
+		}
+		else{
+			bootbox.hideAll();
+		}
+	}); 
+}
+
 </script>
 
 
