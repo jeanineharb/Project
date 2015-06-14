@@ -149,7 +149,7 @@ class EditorController extends Controller {
 	public function delete($id)
 	{
 		Template::destroy($id);
-		return Redirect::to('/template');
+		return Redirect::to('/templates');
 	}
 
 }
