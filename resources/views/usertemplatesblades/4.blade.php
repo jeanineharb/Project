@@ -1,6 +1,6 @@
-<div id="header">
+<html><body><div id="header">
 <div id="headerLeft">
-<h2>BIG<br />
+<h2>BIG<br>
 Title!</h2>
 
 <h3>Lorem ipsum dolor sit amet dolor duis blandit vestibulum faucibus a, tortor. hello</h3>
@@ -59,7 +59,7 @@ Title!</h2>
 <p>In hac habitasse platea dictumst. Praesent wisi accumsan sit amet nibh. Maecenas orci luctus a, lacinia quam sem, posuere commodo, odio condimentum tempor, pede semper risus. Suspendisse pede. In hac habitasse platea dictumst. Nam sed laoreet sit amet erat. Integer.</p>
 </div>
 </div>
-</div>
+</div></body></html>
 
 				<style>
 						#container{
