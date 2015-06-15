@@ -30,6 +30,7 @@ Route::get('/template/send/{id}', array('as' => 'send.temp', 'uses' =>'EditorCon
 
 Route::any('/upload/{id}', array('as' => 'upload', 'uses' => 'UploadFileController@upload'));
 Route::post('/postupload/{id}', 'UploadFileController@postupload');
+Route::any('/send', array('as' => 'send.mails', 'uses' =>'UploadFileController@sendMails'));
 
 
 Route::controllers([
