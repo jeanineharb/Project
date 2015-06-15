@@ -32,6 +32,9 @@ Route::any('/upload/{id}', array('as' => 'upload', 'uses' => 'UploadFileControll
 Route::post('/postupload/{id}', 'UploadFileController@postupload');
 Route::any('/send', array('as' => 'send.mails', 'uses' =>'UploadFileController@sendMails'));
 
+Route::get('/statistics', 'StatisticsController@index');
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
