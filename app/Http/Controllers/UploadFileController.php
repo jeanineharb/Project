@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Template;
 use App\EmailCategory;
+use App\Batch;
+use App\MailStatus;
 
 use Auth;
 use Input;
@@ -38,6 +40,12 @@ class UploadFileController extends Controller {
 
 		$subject = $clientsData['subject'];
 
+		$bat = new Batch;
+		$bat->user = $user['id'];
+		$bat->template = $id;
+		$bat->subject = $subject;
+		$bat->save();
+
 		foreach ($clientsData as $key => $client){
 
 			if (strcmp($key, "subject")==0) {
@@ -52,17 +60,15 @@ class UploadFileController extends Controller {
 				$message->from($user['email'], $user['name']);
 			});
 
-			return $sent;
-		
-			if($sent){
-				echo "Mail to ".$client['emailTo']." sent";
-			}
-			else {
-				echo "Mail to ".$client['emailTo']." failed";
-			}
+			$mail = new MailStatus;
+			$mail->batch = $bat->batchId;
+			$mail->recipientEmail = $client['emailTo'];
+			$mail->isSent = $sent;
+			$mail->save();
+
 		}
 
-		return url('/templates');
+		return url('/statistics');
 	}
 
 
