@@ -4,20 +4,18 @@ return [
 
     'driver' => 'smtp',
  
-    'host' => 'sub4.mail.dreamhost.com',
+    'host' => 'smtp.gmail.com',
  
-    'port' => 587,
+    'port' => 465,
  
+    'encryption' => 'ssl',
  
-    //'encryption' => 'ssl',
+    'username' => 'jeanine.harb@gmail.com',
  
-    'username' => 'info1@templ8.dreamhosters.com',
- 
-    'password' => 'testtest12',
+    'password' => '',
  
     'sendmail' => '/usr/sbin/sendmail -bs',
  
     'pretend' => false,
-
 
 ];
