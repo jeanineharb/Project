@@ -1,4 +1,6 @@
-<html><body><h2>Hi <span>{{$title}} <span>{{$name}}</span></span></h2>
+<html><body><h2>Hola {{$title}} {{$name}}!</h2>
+
+<p>Lorem ipsum dolor sit amet dolor duis blandit vestibulum faucibus a, tortor.</p>
 
 <table border="1" cellpadding="1" cellspacing="1" id="notes" style="width:500px"><tbody><tr><th>Nom</th>
 			<th>Notes</th>
