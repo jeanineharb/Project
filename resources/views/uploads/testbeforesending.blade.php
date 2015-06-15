@@ -13,22 +13,25 @@
 
 <?php echo Form::open(['id' => 'sendForm']); 
 echo '<h4> Do you want to proceed? </h4>';
- echo Form::submit('Send mails', ['class' => 'btn btn-primary']);
+ echo Form::submit('Send mails', ['class' => 'btn btn-primary', 'id' => 'submitButton']);
+ echo '<img src="'.asset('/images/loading.gif').'" id="loading" style="display: none;" />';
  echo Form::close(); 
 
  echo '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
- //$("#sendForm").click(function(e){
-
 	$("#sendForm").on("click", ":submit", function(e){
 		e.preventDefault();
+
+		$("#submitButton").addClass("disabled");
+ 		$("#submitButton").removeAttr("data-toggle");
+		$("#loading").show();
+
 		var $post = {};
 		$post.id ="'.$id.'";
 		$post.d = \''.$data.'\';
 		console.log($post.d);
 		$post._token = $("input[name=_token]").val();
-
 
 		var $url ="';
 		echo route("send.mails");
@@ -39,8 +42,8 @@ $(document).ready(function() {
 			data: $post,
 			method: "POST",
 			success: function(response){
-				 // window.location.href = response;
-				 console.log(response);
+				 window.location.href = response;
+				 // console.log(response);
 			}
 		});
 	});

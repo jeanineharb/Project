@@ -4,6 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class EmailCategory extends Model {
 
+	protected $table = 'email_categories';
+
 	// MASS ASSIGNMENT -------------------------------------------------------
 	// define which attributes are mass assignable (for security)
 	protected $fillable = ['categoryName', 'categoryDesc'];

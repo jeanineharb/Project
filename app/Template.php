@@ -4,6 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Template extends Model {
 
+	protected $table = 'templates';
 	// MASS ASSIGNMENT -------------------------------------------------------
 	// define which attributes are mass assignable (for security)
 	protected $fillable = ['category', 'templateName', 'isFavorite', 'isPredefined', 'html', 'css'];

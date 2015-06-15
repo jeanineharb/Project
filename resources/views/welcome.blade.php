@@ -59,7 +59,7 @@
 				<!-- <div class="quote">{{ Inspiring::quote() }}</div> -->
 				<p> <a class="btn btn-default btn-block" href="{{ url('/about') }}" style="font-size: 18px; font-weight: 900;"> Learn more </a> </p>
 				<p> <a class="btn btn-primary" href="{{ url('/auth/register') }}" style="font-size: 18px; width: 49%;"> Register </a> 
-					<a class="btn btn-info" href="{{ url('/auth/login') }}" style="font-size: 18px; width: 49%;"> Login </a> </p>
+					<a class="btn btn-default" href="{{ url('/auth/login') }}" style="font-size: 18px; width: 49%;"> Login </a> </p>
 				<div class="version">version   0.0.1</div>
 		</div>
 	</body>
