@@ -7,6 +7,7 @@
 	<title>Xpedit</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 	
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -53,6 +54,7 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
+								<li><a href="{{ url('/statistics') }}">Statistics</a></li>
 								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
 							</ul>
 						</li>

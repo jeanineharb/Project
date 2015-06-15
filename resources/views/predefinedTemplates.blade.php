@@ -48,7 +48,6 @@
 					@foreach ($c->predefinedTemplates as $t)
 						<div class="col-xs-18 col-sm-6 col-md-3">
 							<div class="thumbnail">
-								<img src="http://placehold.it/500x300" alt="500x300">
 								<div class="caption">
 									<h4> {{ $t->templateName }} </h4>
 									<p> <a href="{{ route('pick.temp', $t->templateId) }}" class="btn btn-info btn-xs" role="button"> Pick! </a> </p>
@@ -63,7 +62,6 @@
 					@foreach ($u->templates as $t)
 						<div class="col-xs-18 col-sm-6 col-md-3">
 							<div class="thumbnail">
-								<img src="http://placehold.it/500x300" alt="500x300">
 								<div class="caption">
 									<h4 class="tempName" id="{{ $t->templateId }}"> {{ $t->templateName }} </h4>
 									<h6> Created on: {{ date('F d, Y', strtotime($t->created_at)) }} <br/>

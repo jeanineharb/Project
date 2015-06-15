@@ -39,8 +39,7 @@ CKEDITOR.dialog.add('varDialog', function (editor) {
         ],
         onOk: function(){
             var dialog = this;
-            var field = editor.document.createElement('field');
-            field.setAttribute('name', dialog.getValueOf('tab-basic', 'name'));
+            var field = editor.document.createElement('span');
             text = dialog.getValueOf('tab-basic', 'name');
             field.setText('{{$'+text+'}}');
             editor.insertElement(field);
