@@ -7,6 +7,7 @@
 	<title>Xpedit</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 	
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
