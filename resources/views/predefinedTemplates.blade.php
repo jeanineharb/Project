@@ -75,11 +75,6 @@
 					@endforeach
 					@endforeach
 					</div>
-				@else
-					<div class="alert alert-info">
-						Empty category! <a href="{{ url('/template/new') }}"> Create your own template. </a>
-					</div>
-					
 				@endif
 				</div>
 

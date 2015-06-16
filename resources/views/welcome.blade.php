@@ -34,17 +34,19 @@
 			}
 
 			.title {
-				font-size: 96px;
+				font-size: 130px;
 				margin-bottom: 1px;
 			}
 
 			.quote {
 				font-size: 24px;
+				margin-bottom: 30px;
+				letter-spacing: 2px;
 			}
 
 			.version{
 				position: absolute;
-    			bottom: 0px;
+    			bottom: 10px;
     			left: 40%;
     			right: 40%;
     			text-align: center;
@@ -56,11 +58,11 @@
 		<div class="container">
 			<div class="content">
 				<div class="title">Xpedit</div>
-				<!-- <div class="quote">{{ Inspiring::quote() }}</div> -->
+				<div class="quote">Where mail expeditions begin</div>
 				<p> <a class="btn btn-default btn-block" href="{{ url('/about') }}" style="font-size: 18px; font-weight: 900;"> Learn more </a> </p>
-				<p> <a class="btn btn-primary" href="{{ url('/auth/register') }}" style="font-size: 18px; width: 49%;"> Register </a> 
-					<a class="btn btn-default" href="{{ url('/auth/login') }}" style="font-size: 18px; width: 49%;"> Login </a> </p>
-				<div class="version">version   0.0.1</div>
+				<p> <a class="btn btn-primary" href="{{ url('/auth/register') }}" style="font-size: 18px; width: 48.5%; margin-right: 7px;"> Register </a> 
+					<a class="btn btn-default" href="{{ url('/auth/login') }}" style="font-size: 18px; width: 48.5%;"> Login </a> </p>
+				<div class="version">version   1.0.0</div>
 		</div>
 	</body>
 </html>
