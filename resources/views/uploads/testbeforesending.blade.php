@@ -16,7 +16,7 @@ echo '<h4> Do you want to proceed? </h4>';
  echo Form::submit('Send mails', ['class' => 'btn btn-primary', 'id' => 'submitButton']);
  echo '<img src="'.asset('/images/loading.gif').'" id="loading" style="display: none; margin-left: 20px;" />';
  echo Form::close(); 
- echo "<br/> <br/>"
+ echo "<br/> <br/>";
 
  echo '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
