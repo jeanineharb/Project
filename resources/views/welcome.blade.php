@@ -11,6 +11,7 @@
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
 
 		<style>
+		
 			body {
 				margin: 0;
 				padding: 0;
@@ -49,18 +50,28 @@
     			right: 40%;
     			text-align: center;
     		}
+
+
 		</style>
 	</head>
 	<body>
 	
 		<div class="container">
 			<div class="content">
-				<div class="title">Xpedit</div>
+				<div class="title">Xpedit Mailer</div>
 				<!-- <div class="quote">{{ Inspiring::quote() }}</div> -->
+<<<<<<< HEAD
 				<p> <a class="btn btn-default btn-block" href="{{ url('/about') }}" style="font-size: 18px; font-weight: 900;"> Learn more </a> </p>
 				<p> <a class="btn btn-primary" href="{{ url('/auth/register') }}" style="font-size: 18px; width: 49%;"> Register </a> 
 					<a class="btn btn-default" href="{{ url('/auth/login') }}" style="font-size: 18px; width: 49%;"> Login </a> </p>
 				<div class="version">version   0.0.1</div>
+=======
+				<p> <a class="btn btn-default btn-block" href="{{ url('/about') }}" style="font-size: 18px;"> Learn more </a> </p>
+						<div class="version">version   0.0.1</div>
+
+			</div>
+
+>>>>>>> mans
 		</div>
 	</body>
 </html>
