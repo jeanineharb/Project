@@ -30,15 +30,11 @@ Route::get('/template/send/{id}', array('as' => 'send.temp', 'uses' =>'EditorCon
 
 Route::any('/upload/{id}', array('as' => 'upload', 'uses' => 'UploadFileController@upload'));
 Route::post('/postupload/{id}', 'UploadFileController@postupload');
-<<<<<<< HEAD
 Route::any('/send', array('as' => 'send.mails', 'uses' =>'UploadFileController@sendMails'));
 
 Route::get('/statistics', 'StatisticsController@index');
 
 
-=======
-Route::any('/send', array('as'=>'send.mails','uses' => 'UploadFileController@sendMails'));
->>>>>>> mans
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

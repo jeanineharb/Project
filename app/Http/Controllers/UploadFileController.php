@@ -7,11 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Template;
 use App\EmailCategory;
-<<<<<<< HEAD
 use App\Batch;
 use App\MailStatus;
-=======
->>>>>>> mans
 
 use Auth;
 use Input;
@@ -37,32 +34,24 @@ class UploadFileController extends Controller {
 		$user = Auth::user();
 		$data = Input::all();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> mans
 		 $jsonClientsData = $data['d'];
 		 $clientsData = json_decode($jsonClientsData, true);
 		 $id = $data['id'];
 
 		$subject = $clientsData['subject'];
 
-<<<<<<< HEAD
 		$bat = new Batch;
 		$bat->user = $user['id'];
 		$bat->template = $id;
 		$bat->subject = $subject;
 		$bat->save();
 
-=======
->>>>>>> mans
 		foreach ($clientsData as $key => $client){
 
 			if (strcmp($key, "subject")==0) {
 				continue;
 			}
 
-<<<<<<< HEAD
 			$sent = Mail::Send('usertemplatesblades.'.$id, $client, function($message) use ($client, $user, $subject){
 				$recipient = $client['emailTo'];
 				$recipient = str_replace(' ', '', $recipient);
@@ -81,30 +70,7 @@ class UploadFileController extends Controller {
 
 		return url('/statistics');
 	}
-=======
 
-			if(Mail::Send('usertemplatesblades.'.$id , $client, function($message) use ($client , $user , $subject){
-
-		     $recipient = $client['emailTo'];
-			 $recipient = str_replace(' ', '', $recipient);
-	   		 $message->to($recipient, $client['nameTo']);
-	   		 $message->subject($subject);
-	   		 $message->from($user['email'], $user['name']);
-
-			})){
-				echo "Mail to ".$client['emailTo']." sent";
-			
-			}
-			else {
-				echo "Mail to ".$client['emailTo']." failed";
-			}
-	    }
->>>>>>> mans
-
-	    	//Redirect Here // Redirect Here // Redirect Here // Redirect Here // Redirect Here // Redirect Here
-
-	}
-	public function postupload($id) {
 
 	public function postupload($id) {
 
@@ -156,7 +122,6 @@ class UploadFileController extends Controller {
 			$count=0;
 
 			foreach($client->children() as $field) {
-<<<<<<< HEAD
 
 				if ($field->children()->count()==0) {
 					$count++;
@@ -169,20 +134,6 @@ class UploadFileController extends Controller {
 					return view('uploads.upload')->with('id', $id)->with('error',"Please specify an emailTo attribute to ".$client->getName()." number : ".($i+1));
 				}
 
-=======
-
-				if ($field->children()->count()==0) {
-					$count++;
-				}
-
-				if ($client['emailTo']) {
-					$clientsData[$i]['emailTo']=(string)$client['emailTo'];
-				}
-				else{
-					return view('uploads.upload')->with('id', $id)->with('error',"Please specify an emailTo attribute to ".$client->getName()." number : ".($i+1));
-				}
-
->>>>>>> mans
 				if ($client['nameTo']) {
 					$clientsData[$i]['nameTo']=(string)$client['nameTo'];
 				}
@@ -197,11 +148,7 @@ class UploadFileController extends Controller {
 					return view('uploads.upload')->with('id', $id)->with('error',$error);
 				}
 			}
-<<<<<<< HEAD
 			// echo $count." ".$tempcount;
-=======
-			echo $count." ".$tempcount;
->>>>>>> mans
 			if ($count != $tempcount) {
 					return view('uploads.upload')->with('id', $id)->with('error',"Some of your template variables aren't defined in your xml.");
 			}
