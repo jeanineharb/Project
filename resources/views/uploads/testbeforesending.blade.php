@@ -5,7 +5,7 @@
 
 <div class="row" style="margin-bottom: 30px;">
 	<div class="col-sm-6 col-md-12">
-		<h2> Mail Preview <small> This is how your email will look like to one of the recipients</small></h2>
+		<h2> Mail Preview <small> This is how some of the emails will look like to your recipients.</small></h2>
 	</div>
 </div>
 
@@ -50,7 +50,30 @@ $(document).ready(function() {
 });
  </script>';
 
- 
-echo View::make('usertemplatesblades.'.$id,$randomData)->render() ?>
+
+		$i=0;
+		foreach ($clientsData as $key => $client){
+			if ($i>3) {
+				break;
+			}
+			if (strcmp($key, "subject")==0) {
+				continue;
+			}
+			echo '<div class="well">
+	<div class="row">
+	<h4>To : '.$client['nameTo'].' ('.$client['emailTo'].')'.'</h4>
+	</div>
+</div>';
+ 			echo "<hr>";
+
+			echo View::make('usertemplatesblades.'.$id,$client)->render();
+ 			echo "<hr>";
+
+ 			$i++;
+
+		}
+
+
+?>
 
 @endsection

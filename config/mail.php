@@ -4,18 +4,20 @@ return [
 
     'driver' => 'smtp',
  
-    'host' => 'smtp.gmail.com',
+    'host' => 'sub4.mail.dreamhost.com',
  
-    'port' => 465,
+    'port' => 587,
  
-    'encryption' => 'ssl',
  
-    'username' => 'jeanine.harb@gmail.com',
+    'from' => array('address' => 'info@emailtemplateproject', 'name' => 'Xpedit'),
  
-    'password' => '',
+    'username' => 'info@emailtemplateproject.com',
+ 
+    'password' => '$aba7o12mail',
  
     'sendmail' => '/usr/sbin/sendmail -bs',
  
     'pretend' => false,
+
 
 ];
