@@ -26,7 +26,7 @@
 
 		<div class="form-inline">
 			<div class="form-group">
-				<?php echo Form::file('userfile', ['id' => 'uploadFiles']); ?>
+				<?php echo Form::file('userfile', ['id' => 'uploadFiles'], ['class' => 'btn btn-sm btn-primary', 'style' => 'margin-right: 3px;']); ?>
 			</div>
 				<?php echo Form::submit('Upload file', ['class' => 'btn btn-sm btn-primary', 'style' => 'margin-right: 3px;']);
 					echo Form::close(); ?>
@@ -43,6 +43,9 @@
 
 	<div class="panel-body">
 		<p> Your XML document should be well-formed. </p>
+	    <p> Your root node should have a 'subject' attribute to specify the email's subject</p>
+	    <p> All your recipient nodes should have an 'emailTo' and a 'nameTo' attributes. </p>
+
 	</div>
 </div>
 

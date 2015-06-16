@@ -107,7 +107,7 @@ class UploadFileController extends Controller {
 			$html->loadHTML($temp->html);
 			$html->createDocumentFragment();	
 			$head = $html->createElement('head');
-
+			
 			$after = new DOMText(utf8_decode('<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>'));
@@ -149,9 +149,9 @@ class UploadFileController extends Controller {
 				}
 			}
 			// echo $count." ".$tempcount;
-			if ($count != $tempcount) {
-					return view('uploads.upload')->with('id', $id)->with('error',"Some of your template variables aren't defined in your xml.");
-			}
+			// if ($count != $tempcount) {
+			// 		return view('uploads.upload')->with('id', $id)->with('error',"Some of your template variables aren't defined in your xml.");
+			// }
 
 			$i++;
 		}
@@ -162,7 +162,7 @@ class UploadFileController extends Controller {
 		    file_put_contents("../resources/views/usertemplatesblades/".$id.".blade.php", html_entity_decode($html->saveHtml().$temp->css));
 		   // $this->sendMails($clientsData,$id);
 
-			echo view('uploads.testbeforesending')->with('data',json_encode($clientsData))->with('id',$id)->with('randomData',$clientsData[0]);
+			echo view('uploads.testbeforesending')->with('data',json_encode($clientsData))->with('id',$id)->with('clientsData',$clientsData);
 
 		}
 
