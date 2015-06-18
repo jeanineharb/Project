@@ -21,7 +21,11 @@
 	</div>
 </div>
 
-<div contenteditable="true">
+<div class="alert alert-info">
+	Click anywhere inside the dotted zone to modify this template!
+</div>
+
+<div contenteditable="true" style="border: dashed 1px #bce8f1; padding: 20px; border-radius: 4px; bottom: 10px">
 
 <?php
 echo $temp->html;

@@ -5,7 +5,7 @@
 
 <div class="row" style="margin-bottom: 30px;">
 	<div class="col-sm-6 col-md-12">
-		<h2> Mail Preview <small> This is how your email will look like to one of the recipients</small></h2>
+		<h2> Mail Preview <small> This is how some of the emails will look like to your recipients.</small></h2>
 	</div>
 </div>
 
@@ -14,8 +14,9 @@
 <?php echo Form::open(['id' => 'sendForm']); 
 echo '<h4> Do you want to proceed? </h4>';
  echo Form::submit('Send mails', ['class' => 'btn btn-primary', 'id' => 'submitButton']);
- echo '<img src="'.asset('/images/loading.gif').'" id="loading" style="display: none;" />';
+ echo '<img src="'.asset('/images/loading.gif').'" id="loading" style="display: none; margin-left: 20px;" />';
  echo Form::close(); 
+ echo "<br/> <br/>";
 
  echo '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
@@ -50,7 +51,30 @@ $(document).ready(function() {
 });
  </script>';
 
- 
-echo View::make('usertemplatesblades.'.$id,$randomData)->render() ?>
+
+		$i=0;
+		foreach ($clientsData as $key => $client){
+			if ($i>3) {
+				break;
+			}
+			if (strcmp($key, "subject")==0) {
+				continue;
+			}
+			echo '<div class="well">
+	<div class="row">
+	<h4>To : '.$client['nameTo'].' ('.$client['emailTo'].')'.'</h4>
+	</div>
+</div>';
+ 			echo "<hr>";
+
+			echo View::make('usertemplatesblades.'.$id,$clientsData[0])->render();
+ 			echo "<hr>";
+
+ 			$i++;
+
+		}
+
+
+?>
 
 @endsection
